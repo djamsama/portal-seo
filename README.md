@@ -3,6 +3,76 @@
 ## Entrées à ajouter dans le fichier hosts
 
 ```text
+127.0.0.1 pdf.aeroexpo.cn
+127.0.0.1 pdf.aeroexpo.com.ru
+127.0.0.1 pdf.aeroexpo.online
+127.0.0.1 pdf.aeroexpo.online/de
+127.0.0.1 pdf.aeroexpo.online/es
+127.0.0.1 pdf.aeroexpo.online/fr
+127.0.0.1 pdf.aeroexpo.online/it
+127.0.0.1 pdf.aeroexpo.online/ja
+127.0.0.1 pdf.aeroexpo.online/pt
+127.0.0.1 trends.aeroexpo.online
+127.0.0.1 trends.aeroexpo.online/de
+127.0.0.1 trends.aeroexpo.online/fr
+127.0.0.1 www.aeroexpo.cn
+127.0.0.1 www.aeroexpo.com.ru
+127.0.0.1 www.aeroexpo.online
+127.0.0.1 www.aeroexpo.online/de
+127.0.0.1 www.aeroexpo.online/es
+127.0.0.1 www.aeroexpo.online/fr
+127.0.0.1 www.aeroexpo.online/it
+127.0.0.1 www.aeroexpo.online/ja
+127.0.0.1 www.aeroexpo.online/pt
+
+127.0.0.1 pdf.agriexpo.cn
+127.0.0.1 pdf.agriexpo.online
+127.0.0.1 pdf.agriexpo.online/de
+127.0.0.1 pdf.agriexpo.online/es
+127.0.0.1 pdf.agriexpo.online/fr
+127.0.0.1 pdf.agriexpo.online/it
+127.0.0.1 pdf.agriexpo.online/ja
+127.0.0.1 pdf.agriexpo.online/pt
+127.0.0.1 pdf.agriexpo.ru
+127.0.0.1 trends.agriexpo.online
+127.0.0.1 trends.agriexpo.online/de
+127.0.0.1 trends.agriexpo.online/es
+127.0.0.1 trends.agriexpo.online/fr
+127.0.0.1 trends.agriexpo.online/it
+127.0.0.1 www.agriexpo.cn
+127.0.0.1 www.agriexpo.online
+127.0.0.1 www.agriexpo.online/de
+127.0.0.1 www.agriexpo.online/es
+127.0.0.1 www.agriexpo.online/fr
+127.0.0.1 www.agriexpo.online/it
+127.0.0.1 www.agriexpo.online/ja
+127.0.0.1 www.agriexpo.online/pt
+127.0.0.1 www.agriexpo.ru
+
+127.0.0.1 pdf.archiexpo.cn
+127.0.0.1 pdf.archiexpo.com.ru
+127.0.0.1 pdf.archiexpo.com
+127.0.0.1 pdf.archiexpo.com/ja
+127.0.0.1 pdf.archiexpo.com/pt
+127.0.0.1 pdf.archiexpo.de
+127.0.0.1 pdf.archiexpo.es
+127.0.0.1 pdf.archiexpo.fr
+127.0.0.1 pdf.archiexpo.it
+127.0.0.1 trends.archiexpo.com
+127.0.0.1 trends.archiexpo.de
+127.0.0.1 trends.archiexpo.es
+127.0.0.1 trends.archiexpo.fr
+127.0.0.1 trends.archiexpo.it
+127.0.0.1 www.archiexpo.cn
+127.0.0.1 www.archiexpo.com.ru
+127.0.0.1 www.archiexpo.com
+127.0.0.1 www.archiexpo.com/ja
+127.0.0.1 www.archiexpo.com/pt
+127.0.0.1 www.archiexpo.de
+127.0.0.1 www.archiexpo.es
+127.0.0.1 www.archiexpo.fr
+127.0.0.1 www.archiexpo.it
+
 127.0.0.1 pdf.directindustry-china.cn
 127.0.0.1 pdf.directindustry.com.ru
 127.0.0.1 pdf.directindustry.com
@@ -36,6 +106,7 @@
 127.0.0.1 pdf.medicalexpo.es
 127.0.0.1 pdf.medicalexpo.fr
 127.0.0.1 pdf.medicalexpo.it
+127.0.0.1 pdf.medicalexpo.ru
 127.0.0.1 trends.medicalexpo.com
 127.0.0.1 trends.medicalexpo.de
 127.0.0.1 trends.medicalexpo.es
@@ -50,6 +121,31 @@
 127.0.0.1 www.medicalexpo.es
 127.0.0.1 www.medicalexpo.fr
 127.0.0.1 www.medicalexpo.it
+127.0.0.1 www.medicalexpo.ru
+
+127.0.0.1 pdf.nauticexpo.cn
+127.0.0.1 pdf.nauticexpo.com
+127.0.0.1 pdf.nauticexpo.com/ja
+127.0.0.1 pdf.nauticexpo.com/pt
+127.0.0.1 pdf.nauticexpo.de
+127.0.0.1 pdf.nauticexpo.es
+127.0.0.1 pdf.nauticexpo.fr
+127.0.0.1 pdf.nauticexpo.it
+127.0.0.1 pdf.nauticexpo.ru
+127.0.0.1 trends.nauticexpo.com
+127.0.0.1 trends.nauticexpo.de
+127.0.0.1 trends.nauticexpo.es
+127.0.0.1 trends.nauticexpo.fr
+127.0.0.1 trends.nauticexpo.it
+127.0.0.1 www.nauticexpo.cn
+127.0.0.1 www.nauticexpo.com
+127.0.0.1 www.nauticexpo.com/ja
+127.0.0.1 www.nauticexpo.com/pt
+127.0.0.1 www.nauticexpo.de
+127.0.0.1 www.nauticexpo.es
+127.0.0.1 www.nauticexpo.fr
+127.0.0.1 www.nauticexpo.it
+127.0.0.1 www.nauticexpo.ru
 ```
 
 ## Scripts npm
