@@ -5,7 +5,7 @@ const fs = require('fs');
 const app = express();
 const PORT = 3000;
 const STATIC_PAGES_DIR = path.resolve(__dirname, '..', 'static-pages');
-const STATICS_DIR = path.resolve(__dirname, '..', 'pages', 'statics');
+const STATICS_DIR = path.resolve(__dirname, '..', 'statics');
 
 function normalizePathname(pathname) {
     if (!pathname) return '/';

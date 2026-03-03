@@ -59,15 +59,14 @@ function getHostAlternates(host) {
 }
 
 
-app.use('/icons', express.static(path.join(__dirname, 'public', 'icons')));
-app.use('/statics', express.static(path.join(DIRECTORY, 'statics')));
-app.get('/maintenance-banner.js', (req, res) => {
+app.use('/statics', express.static(path.join(__dirname, 'statics')));
+app.get('/statics/maintenance-banner.js', (req, res) => {
     res.type('application/javascript');
-    res.sendFile(path.join(__dirname, 'maintenance-banner.js'));
+    res.sendFile(path.join(__dirname, '/statics/maintenance-banner.js'));
 });
 
 function injectMaintenanceScript(html) {
-    const scriptTag = '<script src="/maintenance-banner.js"></script>';
+    const scriptTag = '<script src="/statics/maintenance-banner.js"></script>';
     if (html.includes(scriptTag)) return html;
 
     const headClose = /<\/head>/i;

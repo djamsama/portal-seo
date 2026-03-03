@@ -61,7 +61,7 @@
 ## Structure des dossiers
 
 - `pages/` : pages HTML sources.
-- `pages/statics/` : assets statiques (JS/CSS) servis via `/statics`.
+- `statics/` : assets statiques (JS/CSS) servis via `/statics`.
 - `static-pages/` : sortie des pages statiques générées.
 - `scripts/` : scripts de build et de serveur statique.
 - `server.js` : serveur de rendu dynamique (parsing des noms de fichiers).

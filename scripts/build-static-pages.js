@@ -45,6 +45,18 @@ function ensureDir(dirPath) {
     fs.mkdirSync(dirPath, { recursive: true });
 }
 
+function injectMaintenanceScript(html) {
+    const scriptTag = '<script src="/statics/maintenance-banner.js"></script>';
+    if (html.includes(scriptTag)) return html;
+
+    const headClose = /<\/head>/i;
+    if (headClose.test(html)) {
+        return html.replace(headClose, `${scriptTag}\n</head>`);
+    }
+
+    return `${scriptTag}\n${html}`;
+}
+
 function writeStaticPage(filePath) {
     const filename = path.basename(filePath);
     const decoded = decodeFilename(filename);
@@ -58,7 +70,9 @@ function writeStaticPage(filePath) {
     const outputPath = path.join(outputDir, 'index.html');
 
     ensureDir(outputDir);
-    fs.copyFileSync(filePath, outputPath);
+    const html = fs.readFileSync(filePath, 'utf8');
+    const withBanner = injectMaintenanceScript(html);
+    fs.writeFileSync(outputPath, withBanner, 'utf8');
     return true;
 }
 
