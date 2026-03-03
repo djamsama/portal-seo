@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
@@ -28,8 +28,8 @@ function collectHtmlFiles(dirPath) {
 
 // Fonction qui décode le nom de fichier
 function decodeFilename(filename) {
-    const match = filename.match(/https___(.+)\.html$/);
-    if (!match) return null;
+  const match = filename.match(/https___(.+)\.html$/);
+  if (!match) return null;
 
     let full = match[1].replace(/_/g, '/'); // ex: www.medicalexpo.com_
     const url = new URL('http://' + full);  // HTTP ici
@@ -58,6 +58,25 @@ function getHostAlternates(host) {
     return [host, `www.${host}`];
 }
 
+
+app.use('/icons', express.static(path.join(__dirname, 'public', 'icons')));
+app.get('/maintenance-banner.js', (req, res) => {
+  res.type('application/javascript');
+  res.sendFile(path.join(__dirname, 'maintenance-banner.js'));
+});
+
+function injectMaintenanceScript(html) {
+    const scriptTag = '<script src="/maintenance-banner.js"></script>';
+    if (html.includes(scriptTag)) return html;
+
+    const headClose = /<\/head>/i;
+    if (headClose.test(html)) {
+        return html.replace(headClose, `${scriptTag}\n</head>`);
+    }
+
+    return `${scriptTag}\n${html}`;
+}
+
 // Middleware pour servir les fichiers
 app.use((req, res) => {
     const host = normalizeHost(req.headers.host?.split(':')[0]); // retirer port si présent
@@ -71,11 +90,23 @@ app.use((req, res) => {
         if (file) break;
     }
 
-    if (file) res.sendFile(path.resolve(file));
-    else res.status(404).send('Not found');
+    if (!file) {
+        res.status(404).send('Not found');
+        return;
+    }
+
+    fs.readFile(path.resolve(file), 'utf8', (err, data) => {
+        if (err) {
+            res.status(500).send('Error reading file');
+            return;
+        }
+
+        res.type('html').send(injectMaintenanceScript(data));
+    });
 });
 
 // Démarrer le serveur HTTP
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`HTTP server running on http://0.0.0.0:${PORT}`);
 });
+
