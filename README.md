@@ -1,6 +1,8 @@
 # portal-seo
 
+## Entrées à ajouter dans le fichier hosts
 
+```text
 127.0.0.1 pdf.directindustry-china.cn
 127.0.0.1 pdf.directindustry.com.ru
 127.0.0.1 pdf.directindustry.com
@@ -48,3 +50,4 @@
 127.0.0.1 www.medicalexpo.es
 127.0.0.1 www.medicalexpo.fr
 127.0.0.1 www.medicalexpo.it
+```
