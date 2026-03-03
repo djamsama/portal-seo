@@ -28,8 +28,8 @@ function collectHtmlFiles(dirPath) {
 
 // Fonction qui décode le nom de fichier
 function decodeFilename(filename) {
-  const match = filename.match(/https___(.+)\.html$/);
-  if (!match) return null;
+    const match = filename.match(/https___(.+)\.html$/);
+    if (!match) return null;
 
     let full = match[1].replace(/_/g, '/'); // ex: www.medicalexpo.com_
     const url = new URL('http://' + full);  // HTTP ici
@@ -60,9 +60,10 @@ function getHostAlternates(host) {
 
 
 app.use('/icons', express.static(path.join(__dirname, 'public', 'icons')));
+app.use('/statics', express.static(path.join(DIRECTORY, 'statics')));
 app.get('/maintenance-banner.js', (req, res) => {
-  res.type('application/javascript');
-  res.sendFile(path.join(__dirname, 'maintenance-banner.js'));
+    res.type('application/javascript');
+    res.sendFile(path.join(__dirname, 'maintenance-banner.js'));
 });
 
 function injectMaintenanceScript(html) {
