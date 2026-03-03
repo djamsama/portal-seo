@@ -59,7 +59,7 @@ function getHostAlternates(host) {
 }
 
 
-app.use('/maintenance-icons', express.static(path.join(__dirname, 'testdi', 'fr', 'icons')));
+app.use('/icons', express.static(path.join(__dirname, 'public', 'icons')));
 app.get('/maintenance-banner.js', (req, res) => {
   res.type('application/javascript');
   res.sendFile(path.join(__dirname, 'maintenance-banner.js'));
@@ -86,3 +86,4 @@ app.use((req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`HTTP server running on http://0.0.0.0:${PORT}`);
 });
+
