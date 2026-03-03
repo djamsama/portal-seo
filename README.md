@@ -1,5 +1,18 @@
 # portal-seo
 
+## Scripts npm
+
+- `npm run dev` : démarre le serveur de rendu (parsing des noms de fichiers).
+- `npm run build:static` : génère des pages statiques dans `static-pages/`.
+- `npm run serve:static` : sert les pages statiques depuis `static-pages/`.
+
+## Structure des dossiers
+
+- `pages/` : pages HTML sources.
+- `statics/` : assets statiques (JS/CSS) servis via `/statics`.
+- `static-pages/` : sortie des pages statiques générées.
+- `scripts/` : scripts de build et de serveur statique.
+- `server.js` : serveur de rendu dynamique (parsing des noms de fichiers).
 ## Entrées à ajouter dans le fichier hosts
 
 ```text
@@ -148,16 +161,3 @@
 127.0.0.1 www.nauticexpo.ru
 ```
 
-## Scripts npm
-
-- `npm run dev` : démarre le serveur de rendu (parsing des noms de fichiers).
-- `npm run build:static` : génère des pages statiques dans `static-pages/`.
-- `npm run serve:static` : sert les pages statiques depuis `static-pages/`.
-
-## Structure des dossiers
-
-- `pages/` : pages HTML sources.
-- `statics/` : assets statiques (JS/CSS) servis via `/statics`.
-- `static-pages/` : sortie des pages statiques générées.
-- `scripts/` : scripts de build et de serveur statique.
-- `server.js` : serveur de rendu dynamique (parsing des noms de fichiers).
