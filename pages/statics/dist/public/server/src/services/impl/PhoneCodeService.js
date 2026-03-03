@@ -1,0 +1,33 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+var _requestService = _interopRequireDefault(require("./requestService"));
+function _callSuper(t, o, e) { return o = (0, _getPrototypeOf2["default"])(o), (0, _possibleConstructorReturn2["default"])(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], (0, _getPrototypeOf2["default"])(t).constructor) : o.apply(t, e)); }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+var PhoneCodeService = exports["default"] = /*#__PURE__*/function (_RequestService) {
+  function PhoneCodeService() {
+    (0, _classCallCheck2["default"])(this, PhoneCodeService);
+    return _callSuper(this, PhoneCodeService, arguments);
+  }
+  (0, _inherits2["default"])(PhoneCodeService, _RequestService);
+  return (0, _createClass2["default"])(PhoneCodeService, [{
+    key: "getPhoneCode",
+    value: function getPhoneCode(countryCode, context) {
+      var url = context.initData.countryPhonePrefixUrl;
+      // Attention dans le cas Chine le paramètre countryIsoCode est en fait countryId
+      // on requête sur la même url, cette spécificité chine est faite aussi sur la partie JAVA
+      return this.get(url, {
+        countryIsoCode: countryCode
+      });
+    }
+  }]);
+}(_requestService["default"]);

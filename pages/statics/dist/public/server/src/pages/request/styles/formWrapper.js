@@ -1,0 +1,41 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.WarningChoices = exports.SideContent = exports.RequestFormWrapper = exports.MainContent = exports.FormWrapperStyled = exports.FormWrapper = exports.FormSimpleWrapper = void 0;
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _semanticUiReact = require("semantic-ui-react");
+var _containerWide = _interopRequireDefault(require("../../../components/styles/containerWide"));
+var _responsive = _interopRequireDefault(require("../../../components/styles/responsive"));
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject0, _templateObject1, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16;
+var media = _responsive["default"].media();
+var TITLE_COLOR = "#555";
+var FormWrapperStyled = exports.FormWrapperStyled = (0, _styledComponents["default"])(_containerWide["default"]).withConfig({
+  componentId: "sc-1uunsbv-0"
+})(["max-width:", ";width:100%;color:rgb(85,85,85);padding-left:0;padding-right:0;", " ", ";.title{font-size:1.75em;text-align:center;color:", ";.subTitle{font-size:0.8em;color:gray;}}.not-register-info{display:inline-block;margin-bottom:20px;}"], function (props) {
+  return props.wide && props.wide === true ? "1020px" : "960px";
+}, media.screenLgMin(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n    width: 970px;\n  "]))), media.screenSmMin(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2["default"])(["\n    width: auto;\n  "]))), TITLE_COLOR);
+var FormReset = (0, _styledComponents["default"])(_semanticUiReact.Form).withConfig({
+  componentId: "sc-1uunsbv-1"
+})(["font-size:inherit !important;input,textarea{border-radius:0 !important;transition:none;}label{font-weight:unset !important;font-size:inherit !important;}div[role=\"combobox\"]{min-height:2.451428571em;}"]);
+var FormSimpleWrapper = exports.FormSimpleWrapper = _styledComponents["default"].div.withConfig({
+  componentId: "sc-1uunsbv-2"
+})(["padding:30px;min-height:100%;"]);
+var FormWrapper = exports.FormWrapper = (0, _styledComponents["default"])(FormReset).withConfig({
+  componentId: "sc-1uunsbv-3"
+})([".forceLeft{margin-left:0 !important;text-align:left;}padding:30px;padding-right:20px;min-height:100%;", ";.field:nth-of-type(2):not(.textarea){", "}& > button{margin:60px auto 0;", ";", ";}input,textarea,div[role=\"combobox\"]{transition:none;color:rgb(85,85,85);font-size:1.167em;}&&.ui.form{input,textarea,div[role=\"combobox\"]{background:#f6f6f6;border:2px solid #e9e9e9;border-radius:0;}input.mobile-select{caret-color:transparent;}}&&.ui.form{.has-error{div[role=\"combobox\"],input{&:focus{border:2px solid red;}border:2px solid red;}}> div > legend{width:100%;display:block;font-size:1.175em;font-weight:bold;border:none;color:#666;margin-bottom:10px;", ";}}.field input,.field textarea{::placeholder{color:#999;}}.field .submittingStep textarea{color:rgb(246,246,246);}.ui.form textarea:focus,.field .submittingStep textarea:focus{color:#fff;}.ui.form textarea{color:red;line-height:1.5rem;", "}div{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;width:100%;&.phone-container{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:420px;}&.phone-code{flex:0 0 20%;", "}&.phone-number{flex:1 0 75%;", " padding-left:5px;}&.partialField{width:50%;margin:0 auto;", "}&.quantity{width:22%;margin:0 auto;", "}.fieldGroupPhone{padding-left:0.5em;padding-right:0.5em;", "}.visitorType{margin-top:4em;width:70%;margin-bottom:1.5em;.fields{margin:0;}label:nth-of-type(2){margin-left:4em;}", ";", ";}.captcha{", ";", ";}label{font-size:1.175em;font-weight:400;line-height:normal;}input[type=\"radio\"]{margin:0 10px 0 5px;}fieldset{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;margin-bottom:20px;}.wrapper-geosuggest{.geosuggest__suggests{position:absolute;padding:5px;margin-top:-1px;background:#fff;border:1px solid #dadbdf;overflow-x:hidden;overflow-y:auto;list-style:none;z-index:5;-webkit-transition:max-height 0.2s,border 0.2s;transition:max-height 0.2s,border 0.2s;}.geosuggest__suggests--hidden{max-height:0;overflow:hidden;border-width:0;display:none;}.geosuggest__item{padding:0.5em 0.65em;cursor:pointer;}.geosuggest__item:hover,.geosuggest__item:focus{background:#f5f5f5;}.geosuggest__item--active{background:#267dc0;color:#fff;}.geosuggest__item--active:hover,.geosuggest__item--active:focus{background:#ccc;}.geosuggest__item__matched-text{font-weight:bold;}}.checkbox{input{margin:0 10px 0 10px;}.choices{label:first-letter{text-transform:capitalize;}}}}"], media.screenSmMin(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteral2["default"])(["\n    padding: 10px;\n  "]))), media.screenXsMin(_templateObject4 || (_templateObject4 = (0, _taggedTemplateLiteral2["default"])(["\n      margin-left: 0px !important;\n    "]))), media.screenSmMin(_templateObject5 || (_templateObject5 = (0, _taggedTemplateLiteral2["default"])(["\n      margin: 20px auto 0;\n    "]))), media.screenXsMin(_templateObject6 || (_templateObject6 = (0, _taggedTemplateLiteral2["default"])(["\n      width: 100%;\n    "]))), media.screenSmMin(_templateObject7 || (_templateObject7 = (0, _taggedTemplateLiteral2["default"])(["\n        display: none;\n      "]))), media.screenXsMin(_templateObject8 || (_templateObject8 = (0, _taggedTemplateLiteral2["default"])(["\n    line-height: 0.5rem;\n  "]))), media.screenXsMin(_templateObject9 || (_templateObject9 = (0, _taggedTemplateLiteral2["default"])(["\n        flex: 0 0 30%;\n      "]))), media.screenXsMin(_templateObject0 || (_templateObject0 = (0, _taggedTemplateLiteral2["default"])(["\n        flex: 0 0 70%;\n      "]))), media.screenXsMin(_templateObject1 || (_templateObject1 = (0, _taggedTemplateLiteral2["default"])(["\n        width: 100%;\n        margin: 0 -.5em 1em;\n      "]))), media.screenXsMin(_templateObject10 || (_templateObject10 = (0, _taggedTemplateLiteral2["default"])(["\n        width: 100%;\n        margin: 0 -.5em 1em;\n      "]))), media.screenXsMin(_templateObject11 || (_templateObject11 = (0, _taggedTemplateLiteral2["default"])(["\n        flex: auto;\n      "]))), media.screenSmMin(_templateObject12 || (_templateObject12 = (0, _taggedTemplateLiteral2["default"])(["\n        width: 100%;\n      "]))), media.screenXxsMin(_templateObject13 || (_templateObject13 = (0, _taggedTemplateLiteral2["default"])(["\n        .fields{\n          flex-direction: column;\n\n          label:nth-of-type(2) {\n            margin: 0;\n            padding-top: 0.75em;\n          }\n        }\n\n      "]))), media.screenXsMin(_templateObject14 || (_templateObject14 = (0, _taggedTemplateLiteral2["default"])(["\n       margin-left: -1.5em;\n        margin-top: 1.5em;\n      "]))), media.screenXxsMin(_templateObject15 || (_templateObject15 = (0, _taggedTemplateLiteral2["default"])(["\n        margin-left: -2.15em;\n        margin-top: 1.5em;\n      "]))));
+var RequestFormWrapper = exports.RequestFormWrapper = _styledComponents["default"].div.withConfig({
+  componentId: "sc-1uunsbv-4"
+})(["display:grid;grid-template-columns:3fr minmax(0,0.9fr);grid-gap:30px;", ";"], media.screenSmMin(_templateObject16 || (_templateObject16 = (0, _taggedTemplateLiteral2["default"])(["\n    grid-template-columns: 1fr;\n  "]))));
+var MainContent = exports.MainContent = _styledComponents["default"].div.withConfig({
+  componentId: "sc-1uunsbv-5"
+})(["> div{min-height:100%;}"]);
+var SideContent = exports.SideContent = _styledComponents["default"].div.withConfig({
+  componentId: "sc-1uunsbv-6"
+})(["div:last-child{margin-bottom:0;}"]);
+var WarningChoices = exports.WarningChoices = _styledComponents["default"].span.withConfig({
+  componentId: "sc-1uunsbv-7"
+})(["font-size:10px;display:block;float:none;font-style:italic;color:orange;"]);

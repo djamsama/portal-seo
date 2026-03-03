@@ -1,0 +1,17 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.RecommendationProductWrapper = void 0;
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _productCard = require("../../../../../../../../../components/product/productCard/styles/productCard");
+var _supplierDetails = require("../../../../../../../../../components/supplierDetails/styles/supplierDetails");
+var _innovation = require("../../../../../../../../../components/styles/innovation");
+var _responsive = require("../../../../../../../../../components/styles/responsive");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+var RecommendationProductWrapper = exports.RecommendationProductWrapper = _styledComponents["default"].div.withConfig({
+  componentId: "sc-5xqw8q-0"
+})(["margin-right:auto;margin-left:auto;margin-bottom:50px;width:auto;max-width:1020px;min-height:550px;", " div.productsContainer{display:flex;flex-grow:0;flex-shrink:0;flex-basis:100%;justify-content:center;}.card{flex-grow:1;flex-shrink:0;flex-basis:25%;box-sizing:border-box;max-width:25%;.TileInset{box-sizing:content-box;}", "}.mob-1 .card{min-width:237px;}.no-mob{min-width:960px;.card{flex-grow:0;width:235px;margin-left:0px;margin-right:0px;padding-left:0px;padding-right:0px;}.TileInset{box-sizing:border-box;border-width:2px;width:235px;}}", "{width:unset;}", "{color:#555;margin-top:initial;}", "{width:65px;}.flickity-enabled{width:100%;.flickity-viewport,.flickity-slider{width:100%;}.card{height:530px;max-width:100%;", " ", " ", " ", "}div.productsContainer{", "}", "{height:234px;}.flickity-page-dots{bottom:-8px;}}"], _responsive.media.screenXsMin(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n    width: 100%;\n  "]))), _responsive.media.screenXsMin(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2["default"])(["\n      margin-left: auto;\n      margin-right: auto;\n\n      &:first-child{\n        margin-left: auto;\n        padding-left: 15px;\n      }\n      &:last-child{\n        margin-left: auto;\n        padding-right: 15px;\n      }\n    "]))), _productCard.PriceSection, _supplierDetails.Reactivity, _innovation.InnovationSmall, _responsive.media.screenMdMin(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteral2["default"])(["\n        height: 550px;\n      "]))), _responsive.media.screenSmMin(_templateObject4 || (_templateObject4 = (0, _taggedTemplateLiteral2["default"])(["\n        height: 570px;\n      "]))), _responsive.media.screenXsMin(_templateObject5 || (_templateObject5 = (0, _taggedTemplateLiteral2["default"])(["\n        height: 550px;\n      "]))), _responsive.media.screenXxsMin(_templateObject6 || (_templateObject6 = (0, _taggedTemplateLiteral2["default"])(["\n        height: 560px;\n      "]))), _responsive.media.screenXsMin(_templateObject7 || (_templateObject7 = (0, _taggedTemplateLiteral2["default"])(["\n        width: 100%;\n        display: block;\n      "]))), _productCard.ProductImageWrapper);
