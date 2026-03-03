@@ -65,6 +65,18 @@ app.get('/maintenance-banner.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'maintenance-banner.js'));
 });
 
+function injectMaintenanceScript(html) {
+    const scriptTag = '<script src="/maintenance-banner.js"></script>';
+    if (html.includes(scriptTag)) return html;
+
+    const headClose = /<\/head>/i;
+    if (headClose.test(html)) {
+        return html.replace(headClose, `${scriptTag}\n</head>`);
+    }
+
+    return `${scriptTag}\n${html}`;
+}
+
 // Middleware pour servir les fichiers
 app.use((req, res) => {
     const host = normalizeHost(req.headers.host?.split(':')[0]); // retirer port si présent
@@ -78,8 +90,19 @@ app.use((req, res) => {
         if (file) break;
     }
 
-    if (file) res.sendFile(path.resolve(file));
-    else res.status(404).send('Not found');
+    if (!file) {
+        res.status(404).send('Not found');
+        return;
+    }
+
+    fs.readFile(path.resolve(file), 'utf8', (err, data) => {
+        if (err) {
+            res.status(500).send('Error reading file');
+            return;
+        }
+
+        res.type('html').send(injectMaintenanceScript(data));
+    });
 });
 
 // Démarrer le serveur HTTP
