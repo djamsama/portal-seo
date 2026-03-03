@@ -3,78 +3,61 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
-const DIRECTORY = './pages';
+const PORT = 3000;  // port HTTP de dev
+const DIRECTORY = './pages'; // dossier avec tous les fichiers HTML
 
-// Decode le nom de fichier en host + path
+function normalizePathname(pathname) {
+    if (!pathname) return '/';
+    if (pathname.length > 1 && pathname.endsWith('/')) return pathname.slice(0, -1);
+    return pathname;
+}
+
+function normalizeHost(hostname) {
+    return (hostname || '').toLowerCase();
+}
+
+function collectHtmlFiles(dirPath) {
+    const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+    return entries.flatMap((entry) => {
+        const fullPath = path.join(dirPath, entry.name);
+        if (entry.isDirectory()) return collectHtmlFiles(fullPath);
+        if (entry.isFile() && entry.name.endsWith('.html')) return [fullPath];
+        return [];
+    });
+}
+
+// Fonction qui décode le nom de fichier
 function decodeFilename(filename) {
   const match = filename.match(/https___(.+)\.html$/);
   if (!match) return null;
 
-  let full = match[1];
-  full = full.replace(/_/g, '/');
-
-  const url = new URL('https://' + full);
-
-  return {
-    host: url.hostname,
-    pathname: url.pathname || '/'
-  };
+    let full = match[1].replace(/_/g, '/'); // ex: www.medicalexpo.com_
+    const url = new URL('http://' + full);  // HTTP ici
+    return {
+        host: normalizeHost(url.hostname),
+        pathname: normalizePathname(url.pathname || '/')
+    };
 }
 
-// Construire mapping host+path -> fichier
-const urlMap = {};
-const routes = [];
+// Construire le mapping host + path -> fichier
+let urlMap = {};
+collectHtmlFiles(DIRECTORY).forEach(filePath => {
+    const filename = path.basename(filePath);
+    const decoded = decodeFilename(filename);
+    if (!decoded) return;
 
-fs.readdirSync(DIRECTORY).forEach((file) => {
-  const decoded = decodeFilename(file);
-  if (!decoded) return;
-
-  const key = decoded.host + decoded.pathname;
-  const filepath = path.join(DIRECTORY, file);
-
-  urlMap[key] = filepath;
-  routes.push({ host: decoded.host, pathname: decoded.pathname, key });
+    const key = decoded.host + decoded.pathname;
+    urlMap[key] = filePath;
+    if (decoded.pathname === '/') {
+        urlMap[decoded.host] = filePath;
+    }
 });
 
-function renderLocalIndex() {
-  const listItems = routes
-    .sort((a, b) => a.host.localeCompare(b.host) || a.pathname.localeCompare(b.pathname))
-    .map((route) => {
-      const href = `/?__host=${encodeURIComponent(route.host)}${route.pathname}`;
-      return `<li><a href="${href}">${route.host}${route.pathname}</a></li>`;
-    })
-    .join('');
-
-  return `<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>portal-seo local preview</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 24px; line-height: 1.45; }
-    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
-  </style>
-</head>
-<body>
-  <h1>Preview local des pages</h1>
-  <p>Mode sans fichier hosts : les liens ci-dessous utilisent <code>?__host=...</code>.</p>
-  <ul>${listItems}</ul>
-</body>
-</html>`;
+function getHostAlternates(host) {
+    if (host.startsWith('www.')) return [host, host.slice(4)];
+    return [host, `www.${host}`];
 }
 
-function normalizeHost(value) {
-  if (!value) return '';
-  let host = String(value).trim();
-
-  host = host.replace(/^https?:\/\//i, '');
-  host = host.split('/')[0];
-  host = host.split(':')[0];
-
-  return host;
-}
 
 app.use('/maintenance-icons', express.static(path.join(__dirname, 'testdi', 'fr', 'icons')));
 app.get('/maintenance-banner.js', (req, res) => {
@@ -82,27 +65,24 @@ app.get('/maintenance-banner.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'maintenance-banner.js'));
 });
 
+// Middleware pour servir les fichiers
 app.use((req, res) => {
-  const headerHost = normalizeHost(req.headers.host);
-  const queryHost = typeof req.query.__host === 'string' ? normalizeHost(req.query.__host) : '';
-  const host = queryHost || headerHost;
+    const host = normalizeHost(req.headers.host?.split(':')[0]); // retirer port si présent
+    const pathname = normalizePathname(req.path);
+    const hostAlternates = getHostAlternates(host);
 
-  if (req.path === '/' && (!host || host === 'localhost' || host === '127.0.0.1')) {
-    res.status(200).send(renderLocalIndex());
-    return;
-  }
+    let file;
+    for (const currentHost of hostAlternates) {
+        const key = currentHost + pathname;
+        file = urlMap[key] || (pathname === '/' ? urlMap[currentHost] : undefined);
+        if (file) break;
+    }
 
-  const key = (host || '') + req.path;
-  const file = urlMap[key];
-
-  if (file) {
-    res.sendFile(path.resolve(file));
-  } else {
-    res.status(404).send('Not found');
-  }
+    if (file) res.sendFile(path.resolve(file));
+    else res.status(404).send('Not found');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(`Loaded ${routes.length} page mappings from ${DIRECTORY}`);
+// Démarrer le serveur HTTP
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`HTTP server running on http://0.0.0.0:${PORT}`);
 });
