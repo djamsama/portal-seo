@@ -9,7 +9,7 @@
     "build:static": "node scripts/build-static-pages.js",
     "serve:static": "node scripts/serve-static-pages.js",
     "build:standalone": "node scripts/build-standalone-pages.js",
-    "deploy:scp": "tar --exclude=node_modules --exclude=.git --exclude=dist --exclude=static-pages -czf - . | ssh djamel.samai@198.244.201.115 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\"",
+    "deploy:scp": "tar --exclude=node_modules --exclude=.git  --exclude=static-pages -czf - . | ssh djamel.samai@198.244.201.115 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

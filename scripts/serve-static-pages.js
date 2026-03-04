@@ -93,8 +93,20 @@ app.use((req, res) => {
         }
     }
 
+    function injectMaintenanceScript(html) {
+        const scriptTag = '<script src="/statics/maintenance-banner.js"></script>';
+        if (html.includes(scriptTag)) return html;
+
+        const headClose = /<\/head>/i;
+        if (headClose.test(html)) {
+            return html.replace(headClose, `${scriptTag}\n</head>`);
+        }
+
+        return `${scriptTag}\n${html}`;
+    }
+
     if (!candidatePath) {
-        res.status(404).send('Not found');
+        res.status(503).type('html').send(injectMaintenanceScript(''));
         return;
     }
 
