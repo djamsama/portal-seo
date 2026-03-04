@@ -106,7 +106,7 @@ app.use((req, res) => {
 });
 
 // Démarrer le serveur HTTP
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`HTTP server running on http://0.0.0.0:${PORT}`);
+app.listen(PORT, '127.0.0.1', () => {
+    console.log(`HTTP server running on http://127.0.0.1:${PORT}`);
 });
 

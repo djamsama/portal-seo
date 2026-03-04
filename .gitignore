@@ -8,7 +8,6 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Build outputs
-dist/
 static-pages/
 
 # Runtime data
