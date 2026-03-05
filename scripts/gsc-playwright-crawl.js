@@ -105,6 +105,18 @@ function ensureDir(dirPath) {
     fs.mkdirSync(dirPath, { recursive: true });
 }
 
+function injectMaintenanceScript(html) {
+    const scriptTag = '<script src="/statics/maintenance-banner.js"></script>';
+    if (html.includes(scriptTag)) return html;
+
+    const headClose = /<\/head>/i;
+    if (headClose.test(html)) {
+        return html.replace(headClose, `${scriptTag}\n</head>`);
+    }
+
+    return `${scriptTag}\n${html}`;
+}
+
 function outputPathForUrl(rawUrl) {
     const url = new URL(rawUrl);
     const cleanPath = normalizePathname(url.pathname || '/');
@@ -391,7 +403,7 @@ async function main() {
 
             const outputPath = outputPathForUrl(inspectedUrl);
             ensureDir(path.dirname(outputPath));
-            fs.writeFileSync(outputPath, html, 'utf8');
+            fs.writeFileSync(outputPath, injectMaintenanceScript(html), 'utf8');
             saved += 1;
             const itemDurationSec = ((Date.now() - itemStart) / 1000).toFixed(1);
             process.stdout.write(`  saved -> ${outputPath} (${itemDurationSec}s)\n`);
