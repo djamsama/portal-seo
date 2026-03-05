@@ -73,6 +73,11 @@ function buildIndexHtml() {
 
 app.use('/statics', express.static(STATICS_DIR));
 
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.sendFile(path.join(__dirname, '..', 'robots.txt'));
+});
+
 app.get('/index', (req, res) => {
     res.type('html').send(buildIndexHtml());
 });

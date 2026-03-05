@@ -60,6 +60,10 @@ function getHostAlternates(host) {
 
 
 app.use('/statics', express.static(path.join(__dirname, 'statics')));
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.sendFile(path.join(__dirname, 'robots.txt'));
+});
 app.get('/statics/maintenance-banner.js', (req, res) => {
     res.type('application/javascript');
     res.sendFile(path.join(__dirname, '/statics/maintenance-banner.js'));
