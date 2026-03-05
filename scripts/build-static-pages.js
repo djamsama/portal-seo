@@ -60,7 +60,7 @@ function injectMaintenanceScript(html) {
 function writeStaticPage(filePath) {
     const filename = path.basename(filePath);
     const decoded = decodeFilename(filename);
-    if (!decoded) return false;
+    if (!decoded) return null;
 
     const outputDir = path.join(
         OUTPUT_DIR,
@@ -73,7 +73,46 @@ function writeStaticPage(filePath) {
     const html = fs.readFileSync(filePath, 'utf8');
     const withBanner = injectMaintenanceScript(html);
     fs.writeFileSync(outputPath, withBanner, 'utf8');
-    return true;
+
+    const sizeBytes = fs.statSync(outputPath).size;
+    const urlPath = decoded.pathname === '/' ? '/' : `/${decoded.pathname.replace(/^\//, '')}`;
+
+    return {
+        host: decoded.host,
+        urlPath,
+        sizeBytes
+    };
+}
+
+function buildIndexFiles(entries) {
+    const sorted = entries.sort((a, b) => `${a.host}${a.urlPath}`.localeCompare(`${b.host}${b.urlPath}`));
+    const indexJsonPath = path.join(OUTPUT_DIR, 'pagelist.json');
+    const indexHtmlPath = path.join(OUTPUT_DIR, 'pagelist.html');
+
+    fs.writeFileSync(indexJsonPath, JSON.stringify(sorted, null, 2));
+
+    const items = sorted
+        .map((entry) => {
+            const sizeKb = Math.max(entry.sizeBytes / 1024, 0.1);
+            return `<li><a href="http://${entry.host}${entry.urlPath}">${entry.host}${entry.urlPath}</a> (${sizeKb.toFixed(1)} KB)</li>`;
+        })
+        .join('\n');
+
+    const html = `<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Page list</title>
+</head>
+<body>
+  <h1>Page list</h1>
+  <ul>
+    ${items}
+  </ul>
+</body>
+</html>`;
+
+    fs.writeFileSync(indexHtmlPath, html, 'utf8');
 }
 
 function buildStaticPages() {
@@ -82,11 +121,18 @@ function buildStaticPages() {
     }
 
     const htmlFiles = collectHtmlFiles(SOURCE_DIR);
+    const entries = [];
     let written = 0;
 
     htmlFiles.forEach((filePath) => {
-        if (writeStaticPage(filePath)) written += 1;
+        const entry = writeStaticPage(filePath);
+        if (entry) {
+            entries.push(entry);
+            written += 1;
+        }
     });
+
+    buildIndexFiles(entries);
 
     console.log(`Static pages generated: ${written}`);
     console.log(`Output directory: ${OUTPUT_DIR}`);

@@ -3,16 +3,38 @@
 ## Scripts npm
 
 - `npm run dev` : démarre le serveur de rendu (parsing des noms de fichiers).
-- `npm run build:static` : génère des pages statiques dans `static-pages/`.
+- `npm run build:static` : génère des pages statiques dans `static-pages/` + `pagelist.*`.
 - `npm run serve:static` : sert les pages statiques depuis `static-pages/`.
+- `npm run replace:statics` : remplace les URLs `static.virtual-expo.com` dans `pages/`.
+- `npm run extract:page-zips` : extrait tous les ZIPs présents dans `pages/`.
+- `npm run cleanup:pages` : supprime tout dans `pages/` sauf `drive-download-*.zip`.
+- `npm run process:pages` : exécute `extract:page-zips` → `replace:statics` → `build:static` → `cleanup:pages`.
+- `npm run deploy:scp` : déploie le projet via SSH (sans `node_modules`, `.git`, `static-pages`).
+
+## Endpoints utiles
+
+- `http://<domaine>:3000/pagelist` : liste des pages (sans port dans les liens).
+- `http://<domaine>:3000/robots.txt`
+
+## Workflow recommandé
+
+1. Déposer le ZIP `drive-download-*.zip` dans `pages/`.
+2. Lancer `npm run process:pages` pour :
+   - extraire les ZIPs,
+   - remplacer les URLs static,
+   - générer les pages statiques et la pagelist,
+   - nettoyer `pages/`.
+3. Démarrer le serveur statique : `npm run serve:static`.
+4. Accéder à la liste des pages : `http://<domaine>:3000/pagelist`.
 
 ## Structure des dossiers
 
 - `pages/` : pages HTML sources.
 - `statics/` : assets statiques (JS/CSS) servis via `/statics`.
 - `static-pages/` : sortie des pages statiques générées.
-- `scripts/` : scripts de build et de serveur statique.
+- `scripts/` : scripts utilitaires.
 - `server.js` : serveur de rendu dynamique (parsing des noms de fichiers).
+
 ## Entrées à ajouter dans le fichier hosts
 
 ```text
