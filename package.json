@@ -7,6 +7,9 @@
     "start": "node server.js",
     "dev": "node server.js",
     "build:static": "node scripts/build-static-pages.js",
+    "build:static:gsc": "node scripts/build-static-pages-from-gsc.js",
+    "gsc:login": "node scripts/gsc-playwright-login.js",
+    "gsc:crawl": "node scripts/gsc-playwright-crawl.js",
     "serve:static": "node scripts/serve-static-pages.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.2"
   }
 }

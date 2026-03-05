@@ -4,7 +4,47 @@
 
 - `npm run dev` : démarre le serveur de rendu (parsing des noms de fichiers).
 - `npm run build:static` : génère des pages statiques dans `static-pages/`.
+- `npm run build:static:gsc -- <fichier.csv> [--limit=500]` : génère uniquement les pages listées dans un export Search Console. 
+exemple avec le fichnier de test Tableaux.csv : ` npm run gsc:crawl -- .\Tableau.csv  --timeout=15 --domain=directindustry.com  --limit=100`
+- `npm run gsc:login` : ouvre Chromium pour te connecter a Google Search Console et sauvegarder la session locale.
+- `npm run gsc:crawl -- <fichier.csv> [--resource-id=sc-domain:directindustry.com] [--limit=100]` : extrait le HTML "Page exploree" via l interface Search Console.
 - `npm run serve:static` : sert les pages statiques depuis `static-pages/`.
+
+## Workflow Playwright (GSC)
+
+### Installation Playwright
+
+```bash
+npm i -D playwright
+npx playwright install chromium
+```
+
+Si tu utilises Chrome local (recommande), tu peux garder `--browser=chrome` dans les commandes.
+
+1. Connexion initiale (1 fois) :
+
+```bash
+npm run gsc:login
+```
+
+2. Extraction HTML via URL Inspection :
+
+```bash
+npm run gsc:crawl -- .\\ton-export-gsc.csv --limit=100
+```
+
+Options utiles :
+- `--profile=.playwright-gsc-profile` pour choisir un dossier de session.
+- `--browser=chrome|chromium` (`chrome` par defaut, pour utiliser ton Chrome local).
+- `--resource-id=sc-domain:directindustry.com` pour forcer une propriete GSC precise.
+- `--domain=archiexpo.com` pour ne traiter que ce domaine (et ses sous-domaines) depuis le CSV.
+- `--timeout=15` timeout par URL (en secondes), puis passage a l URL suivante.
+- `--headless` pour lancer sans UI (apres validation des selecteurs).
+
+Sorties :
+- fichiers HTML ecrits dans `static-pages/<host>/<path>/index.html`
+- erreurs dans `static-pages/gsc-crawl-failures.txt`
+- telechargements navigateur dans `gsc-downloads/`
 
 ## Structure des dossiers
 
@@ -160,4 +200,5 @@
 127.0.0.1 www.nauticexpo.it
 127.0.0.1 www.nauticexpo.ru
 ```
+
 
