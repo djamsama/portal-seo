@@ -12,7 +12,7 @@
     "extract:page-zips": "node scripts/extract-page-zips.js",
     "cleanup:pages": "node scripts/cleanup-pages.js",
     "process:pages": "npm run extract:page-zips && npm run extract:page-zips && npm run replace:statics && npm run build:static && npm run cleanup:pages",
-    "deploy:scp": "tar --exclude=node_modules --exclude=.git  --exclude=static-pages -czf - . | ssh djamel.samai@198.244.201.115 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\"",
+    "deploy:scp": "tar --exclude=node_modules --exclude=.git  --exclude=static-pages -czf - . | ssh djamel.samai@198.244.201.115 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\" && tar --exclude=node_modules --exclude=.git  --exclude=static-pages -czf - . | ssh djamel.samai@141.94.195.5 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
