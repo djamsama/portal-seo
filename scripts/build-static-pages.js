@@ -5,6 +5,15 @@ const SOURCE_DIR = path.resolve(__dirname, '..', 'pages');
 const OUTPUT_DIR = path.resolve(__dirname, '..', 'static-pages');
 const STATIC_DIR_NAME = 'statics';
 
+function getArgValue(flag) {
+    const index = process.argv.indexOf(flag);
+    if (index === -1) return null;
+    return process.argv[index + 1] || null;
+}
+
+const extraSourceDir = getArgValue('--source-dir-2');
+const SOURCE_DIRS = [SOURCE_DIR, ...(extraSourceDir ? [path.resolve(extraSourceDir)] : [])];
+
 function normalizePathname(pathname) {
     if (!pathname) return '/';
     if (pathname.length > 1 && pathname.endsWith('/')) return pathname.slice(0, -1);
@@ -120,16 +129,22 @@ function buildStaticPages() {
         fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
     }
 
-    const htmlFiles = collectHtmlFiles(SOURCE_DIR);
     const entries = [];
     let written = 0;
 
-    htmlFiles.forEach((filePath) => {
-        const entry = writeStaticPage(filePath);
-        if (entry) {
-            entries.push(entry);
-            written += 1;
+    SOURCE_DIRS.forEach((sourceDir) => {
+        if (!fs.existsSync(sourceDir)) {
+            console.warn(`Source directory not found: ${sourceDir}`);
+            return;
         }
+        const htmlFiles = collectHtmlFiles(sourceDir);
+        htmlFiles.forEach((filePath) => {
+            const entry = writeStaticPage(filePath);
+            if (entry) {
+                entries.push(entry);
+                written += 1;
+            }
+        });
     });
 
     buildIndexFiles(entries);

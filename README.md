@@ -4,12 +4,14 @@
 
 - `npm run dev` : démarre le serveur de rendu (parsing des noms de fichiers).
 - `npm run build:static` : génère des pages statiques dans `static-pages/` + `pagelist.*`.
+  - Option : `node scripts/build-static-pages.js --source-dir-2 /path/to/pages` pour ajouter un second répertoire source.
 - `npm run serve:static` : sert les pages statiques depuis `static-pages/`.
 - `npm run replace:statics` : remplace les URLs `static.virtual-expo.com` dans `pages/`.
 - `npm run extract:page-zips` : extrait tous les ZIPs présents dans `pages/`.
 - `npm run cleanup:pages` : supprime tout dans `pages/` sauf `drive-download-*.zip`.
 - `npm run process:pages` : exécute `extract:page-zips` → `replace:statics` → `build:static` → `cleanup:pages`.
-- `npm run deploy:scp` : déploie le projet via SSH (sans `node_modules`, `.git`, `static-pages`).
+  - Option : `npm run process:pages --source-dir-2=/path/to/pages` pour passer un second répertoire source au build.
+- `npm run deploy:scp` : déploie le projet via SSH (sans `node_modules`, `.git`, `static-pages`) vers `198.244.201.115` et `141.94.195.5`.
 
 ## Endpoints utiles
 
