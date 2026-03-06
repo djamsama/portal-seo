@@ -6,6 +6,8 @@ const app = express();
 const PORT = 3000;
 const STATIC_PAGES_DIR = path.resolve(__dirname, '..', 'static-pages');
 const STATICS_DIR = path.resolve(__dirname, '..', 'statics');
+const INDEX_JSON_PATH = path.resolve(STATIC_PAGES_DIR, 'pagelist.json');
+const INDEX_HTML_PATH = path.resolve(STATIC_PAGES_DIR, 'pagelist.html');
 
 function normalizePathname(pathname) {
     if (!pathname) return '/';
@@ -22,48 +24,33 @@ function getHostAlternates(host) {
     return [host, `www.${host}`];
 }
 
-function collectIndexFiles(dirPath, base = '') {
-    const entries = fs.readdirSync(dirPath, { withFileTypes: true });
-    return entries.flatMap((entry) => {
-        const fullPath = path.join(dirPath, entry.name);
-        const nextBase = path.join(base, entry.name);
-        if (entry.isDirectory()) return collectIndexFiles(fullPath, nextBase);
-        if (entry.isFile() && entry.name === 'index.html') return [nextBase];
+function loadIndexEntries() {
+    if (!fs.existsSync(INDEX_JSON_PATH)) return [];
+    try {
+        return JSON.parse(fs.readFileSync(INDEX_JSON_PATH, 'utf8'));
+    } catch (error) {
         return [];
-    });
+    }
 }
 
-function buildIndexHtml() {
-    if (!fs.existsSync(STATIC_PAGES_DIR)) return '<p>Aucune page générée.</p>';
+function buildIndexHtml(entries) {
+    if (!entries.length) return '<p>Aucune page générée.</p>';
 
-    const files = collectIndexFiles(STATIC_PAGES_DIR);
-    const links = files
-        .map((filePath) => {
-            const normalized = filePath.replace(/\\/g, '/');
-            const parts = normalized.split('/');
-            const host = parts.shift();
-            const pathname = parts.slice(0, -1).join('/');
-            const urlPath = pathname ? `/${pathname}` : '/';
-            const url = `http://${host}:${PORT}${urlPath}`;
-            const fullPath = path.join(STATIC_PAGES_DIR, normalized);
-            const stats = fs.statSync(fullPath);
-            const sizeKb = Math.max(stats.size / 1024, 0.1);
-            return { host, urlPath, url, sizeKb };
+    const items = entries
+        .map((entry) => {
+            const sizeKb = Math.max(entry.sizeBytes / 1024, 0.1);
+            return `<li><a href="http://${entry.host}${entry.urlPath}">${entry.host}${entry.urlPath}</a> (${sizeKb.toFixed(1)} KB)</li>`;
         })
-        .sort((a, b) => a.url.localeCompare(b.url));
-
-    const items = links
-        .map((link) => `<li><a href="${link.url}">${link.host}${link.urlPath}</a> (${link.sizeKb.toFixed(1)} KB)</li>`)
         .join('\n');
 
     return `<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <title>Index des pages statiques</title>
+  <title>Page list</title>
 </head>
 <body>
-  <h1>Index des pages statiques</h1>
+  <h1>Page list</h1>
   <ul>
     ${items}
   </ul>
@@ -71,10 +58,26 @@ function buildIndexHtml() {
 </html>`;
 }
 
-app.use('/statics', express.static(STATICS_DIR));
+const indexEntries = loadIndexEntries();
+const indexHtml = fs.existsSync(INDEX_HTML_PATH) ? null : buildIndexHtml(indexEntries);
 
-app.get('/index', (req, res) => {
-    res.type('html').send(buildIndexHtml());
+app.use('/statics', express.static(STATICS_DIR, {
+    setHeaders: (res) => {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    }
+}));
+
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.sendFile(path.join(__dirname, '..', 'robots.txt'));
+});
+
+app.get('/pagelist', (req, res) => {
+    if (fs.existsSync(INDEX_HTML_PATH)) {
+        res.type('html').sendFile(INDEX_HTML_PATH);
+        return;
+    }
+    res.type('html').send(indexHtml || '<p>Aucune page générée.</p>');
 });
 
 app.use((req, res) => {
@@ -93,14 +96,27 @@ app.use((req, res) => {
         }
     }
 
+    function injectMaintenanceScript(html) {
+        const scriptTag = '<script src="/statics/maintenance-banner.js"></script>';
+        if (html.includes(scriptTag)) return html;
+
+        const headClose = /<\/head>/i;
+        if (headClose.test(html)) {
+            return html.replace(headClose, `${scriptTag}\n</head>`);
+        }
+
+        return `${scriptTag}\n${html}`;
+    }
+
     if (!candidatePath) {
-        res.status(404).send('Not found');
+        res.status(503).type('html').send(injectMaintenanceScript(''));
         return;
     }
 
+    res.setHeader('Cache-Control', 'public, max-age=300');
     res.sendFile(candidatePath);
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Static pages server running on http://0.0.0.0:${PORT}`);
+app.listen(PORT, '127.0.0.1', () => {
+    console.log(`Static pages server running on http://127.0.0.1:${PORT}`);
 });

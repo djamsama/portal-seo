@@ -8,7 +8,31 @@
 exemple avec le fichnier de test Tableaux.csv : ` npm run gsc:crawl -- .\Tableau.csv  --timeout=15 --domain=directindustry.com  --limit=100`
 - `npm run gsc:login` : ouvre Chromium pour te connecter a Google Search Console et sauvegarder la session locale.
 - `npm run gsc:crawl -- <fichier.csv> [--resource-id=sc-domain:directindustry.com] [--limit=100]` : extrait le HTML "Page exploree" via l interface Search Console.
+- `npm run build:static` : génère des pages statiques dans `static-pages/` + `pagelist.*`.
+  - Option : `node scripts/build-static-pages.js --source-dir-2 /path/to/pages` pour ajouter un second répertoire source.
 - `npm run serve:static` : sert les pages statiques depuis `static-pages/`.
+- `npm run replace:statics` : remplace les URLs `static.virtual-expo.com` dans `pages/`.
+- `npm run extract:page-zips` : extrait tous les ZIPs présents dans `pages/`.
+- `npm run cleanup:pages` : supprime tout dans `pages/` sauf `drive-download-*.zip`.
+- `npm run process:pages` : exécute `extract:page-zips` → `replace:statics` → `build:static` → `cleanup:pages`.
+  - Option : `npm run process:pages --source-dir-2=/path/to/pages` pour passer un second répertoire source au build.
+- `npm run deploy:scp` : déploie le projet via SSH (sans `node_modules`, `.git`, `static-pages`) vers `198.244.201.115` et `141.94.195.5`.
+
+## Endpoints utiles
+
+- `http://<domaine>:3000/pagelist` : liste des pages (sans port dans les liens).
+- `http://<domaine>:3000/robots.txt`
+
+## Workflow recommandé
+
+1. Déposer le ZIP `drive-download-*.zip` dans `pages/`.
+2. Lancer `npm run process:pages` pour :
+   - extraire les ZIPs,
+   - remplacer les URLs static,
+   - générer les pages statiques et la pagelist,
+   - nettoyer `pages/`.
+3. Démarrer le serveur statique : `npm run serve:static`.
+4. Accéder à la liste des pages : `http://<domaine>:3000/pagelist`.
 
 ## Workflow Playwright (GSC)
 
@@ -51,8 +75,9 @@ Sorties :
 - `pages/` : pages HTML sources.
 - `statics/` : assets statiques (JS/CSS) servis via `/statics`.
 - `static-pages/` : sortie des pages statiques générées.
-- `scripts/` : scripts de build et de serveur statique.
+- `scripts/` : scripts utilitaires.
 - `server.js` : serveur de rendu dynamique (parsing des noms de fichiers).
+
 ## Entrées à ajouter dans le fichier hosts
 
 ```text
