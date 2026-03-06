@@ -1,0 +1,74 @@
+[
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/prod/woma-gmbh/product-15514-2574434.html",
+    "code_source": "<html><head></head><body>Hello word 1</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/pt/prod/labom-mess-und-regeltechnik-gmbh/product-14048-1200697.html",
+    "code_source": "<html><head></head><body>Hello word 2</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/ja/prod/boviar-srl/product-82655-2738533.html",
+    "code_source": "<html><head></head><body>Hello word 3</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/pt/prod/kabelmat-wickeltechnik-gmbh/product-178501-2082739.html",
+    "code_source": "<html><head></head><body>Hello word 4</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/prod/staiger-gmbh-co-kg/product-13760-2030257.html",
+    "code_source": "<html><head></head><body>Hello word 5</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/pt/prod/heatfor-sr/product-232974-2335668.html",
+    "code_source": "<html><head></head><body>Hello word 6</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/ja/prod/t-fluid-solutions/product-69633-602246.html",
+    "code_source": "<html><head></head><body>Hello word 7</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/pt/prod/southco-asia-ltd/product-98741-1839128.html",
+    "code_source": "<html><head></head><body>Hello word 8</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/ja/prod/belt-technologies-europe-limited/product-29973-2639894.html",
+    "code_source": "<html><head></head><body>Hello word 9</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/ja/seizomoto-kogyo-bunya/kiwado-189208.html",
+    "code_source": "<html><head></head><body>Hello word 10</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/pt/prod/safe-rack/product-68849-2079367.html",
+    "code_source": "<html><head></head><body>Hello word 11</body></html>"
+  },
+  {
+    "site": "www.directindustry.com",
+    "date": {"$date": "2026-02-24T00:00:00.000Z"},
+    "url": "https://www.directindustry.com/ja/prod/dimatra/product-139520-1845115.html",
+    "code_source": "<html><head></head><body>Hello word 12</body></html>"
+  }
+]
