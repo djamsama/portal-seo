@@ -5,7 +5,7 @@ const { MongoClient } = require('mongodb');
 
 const app = express();
 const PORT = 3000;  // port HTTP de dev
-const DIRECTORY = './pages'; // dossier avec tous les fichiers HTML
+const DIRECTORY = process.env.STATIC_PAGES_DIR || './static-pages'; // dossier avec tous les fichiers HTML
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://root:rootpass123@127.0.0.1:27017/portal_seo?authSource=admin';
 const MONGODB_DB = process.env.MONGODB_DB || 'portal_seo';
@@ -90,6 +90,7 @@ function buildUrlCandidates(hostAlternates, pathname) {
 }
 
 function collectHtmlFiles(dirPath) {
+    if (!fs.existsSync(dirPath)) return [];
     const entries = fs.readdirSync(dirPath, { withFileTypes: true });
     return entries.flatMap((entry) => {
         const fullPath = path.join(dirPath, entry.name);
@@ -125,6 +126,10 @@ collectHtmlFiles(DIRECTORY).forEach(filePath => {
         urlMap[decoded.host] = filePath;
     }
 });
+
+if (!fs.existsSync(DIRECTORY)) {
+    console.warn(`Static directory not found: ${path.resolve(DIRECTORY)}`);
+}
 
 function getHostAlternates(host) {
     if (host.startsWith('www.')) return [host, host.slice(4)];
