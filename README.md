@@ -5,12 +5,21 @@
 - `npm run dev` : démarre le serveur de rendu (parsing des noms de fichiers).
 - `npm run build:static` : génère des pages statiques dans `static-pages/` + `pagelist.*`.
   - Option : `node scripts/build-static-pages.js --source-dir-2 /path/to/pages` pour ajouter un second répertoire source.
+  - Option : `node scripts/build-static-pages.js --append-output` pour conserver `static-pages/` et fusionner la pagelist.
 - `npm run serve:static` : sert les pages statiques depuis `static-pages/`.
 - `npm run replace:statics` : remplace les URLs `static.virtual-expo.com` dans `pages/`.
 - `npm run extract:page-zips` : extrait tous les ZIPs présents dans `pages/`.
 - `npm run cleanup:pages` : supprime tout dans `pages/` sauf `drive-download-*.zip`.
+- `npm run cleanup:pages:all` : supprime tout dans `pages/` y compris les ZIPs.
 - `npm run process:pages` : exécute `extract:page-zips` → `replace:statics` → `build:static` → `cleanup:pages`.
   - Option : `npm run process:pages --source-dir-2=/path/to/pages` pour passer un second répertoire source au build.
+- `npm run copy:pages:batch` : copie un lot de fichiers depuis `/var/ve-botify` vers `pages/` (ordre alphabétique) avec suivi d'état.
+  - Options : `--source-dir`, `--dest-dir`, `--batch-size`, `--state-file`.
+  - Exemple : `npm run copy:pages:batch -- --batch-size 10000 --source-dir /var/ve-botify`.
+- `npm run process:pages:batch` : copie un lot puis lance l'extraction/remplacement/build et nettoie `pages/` (ZIPs inclus) à la fin.
+  - Exemple : `npm run process:pages:batch -- --batch-size 10000 --source-dir /var/ve-botify --append-output`.
+- `npm run process:pages:all` : enchaîne les lots jusqu'à traiter tous les fichiers (ordre alphabétique) en conservant `static-pages/` et en fusionnant la pagelist.
+  - Exemple : `npm run process:pages:all -- --batch-size 10000 --source-dir /var/ve-botify`.
 - `npm run deploy:scp` : déploie le projet via SSH (sans `node_modules`, `.git`, `static-pages`) vers `198.244.201.115` et `141.94.195.5`.
 
 ## Endpoints utiles
@@ -20,7 +29,7 @@
 
 ## Workflow recommandé
 
-1. Déposer le ZIP `drive-download-*.zip` dans `pages/`.
+1. Déposer le ZIP `drive-download-*.zip` dans `pages/` (ou utiliser le traitement par lots ci-dessous).
 2. Lancer `npm run process:pages` pour :
    - extraire les ZIPs,
    - remplacer les URLs static,
@@ -28,6 +37,17 @@
    - nettoyer `pages/`.
 3. Démarrer le serveur statique : `npm run serve:static`.
 4. Accéder à la liste des pages : `http://<domaine>:3000/pagelist`.
+
+### Traitement par lots depuis `/var/ve-botify`
+
+- Copier et traiter un lot (ordre alphabétique) :
+  - `npm run process:pages:batch -- --batch-size 10000 --source-dir /var/ve-botify --append-output`
+- Traiter tous les fichiers :
+  - `npm run process:pages:all -- --batch-size 10000 --source-dir /var/ve-botify`
+- La taille du lot est configurable via `--batch-size`.
+- Un fichier d'état `.batch-progress.json` garde la progression (dernier fichier traité) sans modifier la source.
+  - Les ZIPs copiés dans `pages/` sont supprimés après traitement pour éviter les re-traitements.
+  - Pour repartir de zéro : supprimer `.batch-progress.json`.
 
 ## Structure des dossiers
 

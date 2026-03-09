@@ -11,8 +11,12 @@
     "replace:statics": "node scripts/replace-static-urls.js",
     "extract:page-zips": "node scripts/extract-page-zips.js",
     "cleanup:pages": "node scripts/cleanup-pages.js",
+    "cleanup:pages:all": "node scripts/cleanup-pages.js --remove-zips",
+    "copy:pages:batch": "node scripts/copy-pages-batch.js",
     "process:pages": "npm run extract:page-zips && npm run extract:page-zips && npm run replace:statics && npm run build:static -- --source-dir-2 \"$npm_config_source_dir_2\" && npm run cleanup:pages",
-    "deploy:scp": "tar --exclude=node_modules --exclude=.git  --exclude=static-pages -czf - . | ssh djamel.samai@198.244.201.115 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\" && tar --exclude=node_modules --exclude=.git  --exclude=static-pages -czf - . | ssh djamel.samai@141.94.195.5 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\"",
+    "process:pages:batch": "node scripts/process-pages-batch.js",
+    "process:pages:all": "node scripts/process-pages-all.js",
+    "deploy:scp": "tar --exclude=node_modules --exclude=.git  --exclude=static-pages --exclude=pages -czf - . | ssh djamel.samai@198.244.201.115 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\" && tar --exclude=node_modules --exclude=.git  --exclude=static-pages --exclude=pages -czf - . | ssh djamel.samai@141.94.195.5 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

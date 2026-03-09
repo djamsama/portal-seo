@@ -3,8 +3,10 @@ const path = require('path');
 
 const ROOT_DIR = path.resolve(__dirname, '..', 'pages');
 const KEEP_ZIP_REGEX = /^drive-download-.*\.zip$/i;
+const REMOVE_ZIPS = process.argv.includes('--remove-zips');
 
 function shouldKeep(filePath) {
+    if (REMOVE_ZIPS) return false;
     const name = path.basename(filePath);
     return KEEP_ZIP_REGEX.test(name);
 }
