@@ -20,6 +20,7 @@
   - Exemple : `npm run process:pages:batch -- --batch-size 10000 --source-dir /var/ve-botify --append-output`.
 - `npm run process:pages:all` : enchaîne les lots jusqu'à traiter tous les fichiers (ordre alphabétique) en conservant `static-pages/` et en fusionnant la pagelist.
   - Exemple : `npm run process:pages:all -- --batch-size 10000 --source-dir /var/ve-botify`.
+- `npm run count:static-pages` : compte les pages générées par catégorie (ex: `www`) et par segment `www/*`.
 - `npm run deploy:scp` : déploie le projet via SSH (sans `node_modules`, `.git`, `static-pages`) vers `198.244.201.115` et `141.94.195.5`.
 
 ## Endpoints utiles
