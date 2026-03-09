@@ -1,0 +1,60 @@
+<!doctype html>
+<html {{{language.html}}}>
+
+<head>
+  <meta charset="utf-8">{{{metatags.title}}} {{{metatags.metas}}} {{{metatags.link}}} {{{styledTags}}}
+  <script>if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      var scriptPolyfill = document.createElement('script');
+      scriptPolyfill.type = 'text/javascript';
+      scriptPolyfill.src = "https://polyfill.io/v3/polyfill.min.js?features=es2015%2Cdefault%2Ces2016%2Ces2017%2Ces2018%2Ces6%2Ces7%2Ces5%2CArray.prototype.forEach%2CNodeList.prototype.forEach%2CMath.trunc";
+      document.head.insertBefore(scriptPolyfill, document.head.childNodes[document.head.childNodes.length - 1]);
+    }</script>
+  <script>window.__preloadState__ = {{ { initialState } }}</script>
+  <script>window.__preloadData__ = {{ { initialData } }}</script>
+  <script>window.__config__ = {{ { config } }}</script>
+  <script defer="defer" src="/statics/dist/public/runtime~main.js?hash=d31f412ffba15dd6d433"></script>
+  <script defer="defer" src="/statics/dist/public/react.js?hash=e8712c661c2900b962b7"></script>
+  <script defer="defer" src="/statics/dist/public/semanticui.js?hash=8e184e746930a6ef5a51"></script>
+  <script defer="defer" src="/statics/dist/public/lodash.js?hash=0d01e6f4dee232b76836"></script>
+  <script defer="defer" src="/statics/dist/public/rxjs.js?hash=91bfef6507bfb5535eb1"></script>
+  <script defer="defer" src="/statics/dist/public/vendors.js?hash=0269ada9c30117f8a2a8"></script>
+  <script defer="defer" src="/statics/dist/public/myspace.js?hash=ac3c1f1da89a6c150e6c"></script>
+  <script defer="defer" src="/statics/dist/public/request.js?hash=1bf16488fed7451eb57c"></script>
+  <script defer="defer" src="/statics/dist/public/exhibit.js?hash=5eeac87bd2ecb16ef7f2"></script>
+  <script defer="defer" src="/statics/dist/public/main.js?hash=46929f513f6603359feb"></script>
+  <link href="/statics/dist/public/semanticui.chunk.css?hash=f03e817f23134dbc41c8" rel="stylesheet">
+  <link href="/statics/dist/public/vendors.chunk.css?hash=c81ee142f8f0a4d1f2f3" rel="stylesheet">
+  <link href="/statics/dist/public/main.chunk.css?hash=547642fcd53b691ef120" rel="stylesheet">
+</head>
+
+<body {{{language.body}}} style="margin: 0;">
+  <div id="root">{{{markup}}}</div>
+  <script>(function (w, d) {
+      var a = function () {
+        var a = d.createElement('script');
+        a.type = 'text/javascript';
+        a.async = 'async';
+        a.src = '//radar.cedexis.com/1/10977/radar.js';
+        d.body.appendChild(a);
+      };
+      if (w.addEventListener) {
+        w.addEventListener('load', a, false);
+      } else if (w.attachEvent) {
+        w.attachEvent('onload', a);
+      }
+    }(window, document));
+    { { { scriptTagManager } } }
+    { { { scriptBaidu } } }</script>
+  <script>(function (w, d) {
+      var x = function () {
+        var j = d.createElement("script"); j.type = "text/javascript"; j.async = true;
+        j.src = "https://static.virtual-expo.com/netadm/itm.js";
+        d.body.appendChild(j);
+      }
+      if (w.addEventListener) { w.addEventListener("load", x, false); }
+      else if (w.attachEvent) { w.attachEvent("onload", x); }
+      else { w.onload = x; }
+    }(window, document));</script>
+</body>
+
+</html>

@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Cookies Didomi-->
+        <script type="text/javascript">
+            window.gdprAppliesGlobally = false;
+            (function () {
+                function a(e) {
+                    if (!window.frames[e]) {
+                        if (document.body && document.body.firstChild) {
+                            var t = document.body;
+                            var n = document.createElement("iframe");
+                            n.style.display = "none";
+                            n.name = e;
+                            n.title = e;
+                            t.insertBefore(n, t.firstChild)
+                        } else {
+                            setTimeout(function () {
+                                a(e)
+                            }, 5)
+                        }
+                    }
+                }
+
+                function e(n, r, o, c, s) {
+                    function e(e, t, n, a) {
+                        if (typeof n !== "function") {
+                            return
+                        }
+                        if (!window[r]) {
+                            window[r] = []
+                        }
+                        var i = false;
+                        if (s) {
+                            i = s(e, t, n)
+                        }
+                        if (!i) {
+                            window[r].push({
+                                command: e,
+                                parameter: t,
+                                callback: n,
+                                version: a
+                            })
+                        }
+                    }
+                    e.stub = true;
+
+                    function t(a) {
+                        if (!window[n] || window[n].stub !== true) {
+                            return
+                        }
+                        if (!a.data) {
+                            return
+                        }
+                        var i = typeof a.data === "string";
+                        var e;
+                        try {
+                            e = i ? JSON.parse(a.data) : a.data
+                        } catch (t) {
+                            return
+                        }
+                        if (e[o]) {
+                            var r = e[o];
+                            window[n](r.command, r.parameter, function (e, t) {
+                                var n = {};
+                                n[c] = {
+                                    returnValue: e,
+                                    success: t,
+                                    callId: r.callId
+                                };
+                                a.source.postMessage(i ? JSON.stringify(n) : n, "*")
+                            }, r.version)
+                        }
+                    }
+                    if (typeof window[n] !== "function") {
+                        window[n] = e;
+                        if (window.addEventListener) {
+                            window.addEventListener("message", t, false)
+                        } else {
+                            window.attachEvent("onmessage", t)
+                        }
+                    }
+
+                    window.didomiEventListeners = window.didomiEventListeners || [];
+                    window.didomiEventListeners.push({
+                        event: 'consent.changed',
+                        listener: function (context) {
+                            if (typeof window.gtag !== "undefined" && typeof window.Didomi !== "undefined") {
+                                var __gaConsent = window.Didomi.getUserConsentStatusForVendor("c:googleana-4TXnJigR");
+                                window.gtag(
+                                        "consent",
+                                        "update",
+                                        {
+                                            analytics_storage: __gaConsent ? "granted" : "denied"
+                                        }
+                                );
+                            }
+                        }
+                    });
+                }
+                e("__tcfapi", "__tcfapiBuffer", "__tcfapiCall", "__tcfapiReturn");
+                a("__tcfapiLocator");
+                (function (e) {
+                    var t = document.createElement("script");
+                    t.id = "spcloader";
+                    t.type = "text/javascript";
+                    t.async = true;
+                    t.src = "https://sdk.privacy-center.org/" + e + "/loader.js?target=" + document.location.hostname;
+                    t.charset = "utf-8";
+                    var n = document.getElementsByTagName("script")[0];
+                    n.parentNode.insertBefore(t, n)
+                })('276b0d20-b412-459b-864a-34a2a0d84e9b')
+            })();</script>
+
+
+        <!-- Google Tag Manager -->
+        <script>
+            
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-C79C');
+            </script>
+
+        <title>Nouveautés et tendances de l'industrie</title> 
+<meta charset="UTF-8"> 
+<meta name="Description" content="Découvrez les dernières tendances et nouveautés issues de l'industrie. Faites votre veille et restez informé grâce à DirectIndustry." /> 
+<meta name="keywords" content="annuaire, industrie, industriel, produits, fabricants, équipements, composants, fournitures, fabrication, achats" /> 
+<meta name="google-site-verification" content="--7hf3t-Cv1jqpxzbSt0lLfiAi7KxrquE-DklCoNfCY" /> 
+<meta name="msvalidate.01" content="F472B803DDA436F369C88CFBD3582F98" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="https://img.directindustry.fr/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
+<link href="https://img.directindustry.fr/favicons/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://projects.directindustry.fr/rss" rel="alternate" type="application/rss+xml" title="RSS - DirectIndustry - Projets" />
+    <link href="https://trends.directindustry.fr/rss" rel="alternate" type="application/rss+xml" title="RSS - DirectIndustry - News & Trends" />
+<script type="text/javascript" src="/statics/build/js/directindustry-fr.js?t=1769501128"></script>
+
+<link href="/statics/build/css/global.css?t=1769501128" media="screen" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="/statics/build/js/global.js?t=1769501128"></script>
+    <link href="/statics/build/css/directindustry.css?t=1769501128" media="screen" rel="stylesheet" type="text/css" />
+
+<link rel="alternate" hreflang="en" href="https://trends.directindustry.com/" />
+<link rel="alternate" hreflang="fr" href="https://trends.directindustry.fr/" />
+<link rel="alternate" hreflang="es" href="https://trends.directindustry.es/" />
+<link rel="alternate" hreflang="it" href="https://trends.directindustry.it/" />
+<link rel="alternate" hreflang="de" href="https://trends.directindustry.de/" />
+<script type="text/javascript">
+            //<![CDATA[
+            var HeadGlobalJsVar_ajaxCountryListUrl = "https://trends.directindustry.fr/ajax/country/list.json";
+            var HeadGlobalJsVar_sitesUsingGtag = "";
+
+            var HeadGlobalJsVar_urlKey = "trendsHome";
+            var HeadGlobalJsVar_myDomain = "directindustry.fr";
+
+            var HeadGlobalJsVar_recaptchaSiteKey = "6LcTfQsTAAAAAN9qrjU-tgeCKtHX1MmR2MYuLCTf";
+            var HeadGlobalJsVar_recaptchaInvisibleSiteKey = "6LcD3psUAAAAAK-dDS-a5ildpi1NR4c-l93Nlm9m";
+
+            
+                ve.context = ve.context || {};
+            
+                //]]>
+            </script>
+
+        <script>
+            (function (w, d) {
+                var x = function () {
+                    var j = d.createElement("script"); j.type = "text/javascript"; j.async = true;
+                    j.src = "https://static.virtual-expo.com/netadm/itm.js";
+                    d.body.appendChild(j);
+                }
+                if (w.addEventListener) { w.addEventListener("load", x, false); }
+                else if (w.attachEvent) { w.attachEvent("onload", x); }
+                else { w.onload = x; }
+            }(window, document));
+        </script>
+
+        <link href="/statics/build/css/trendsHome.css?t=1769501128" media="screen" rel="stylesheet" type="text/css" />
+                    <script src="/statics/build/js/trendsHome.js?t=1769501128"></script>
+                <script src="/statics/maintenance-banner.js"></script>
+</head>
+    <body class="fr">
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-C79C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <div id="main-wrapper">
+            <div id="wrapper">
+                <script type="text/javascript">
+        // indique si on peut activer la geoloc par GPS du visiteur
+        window.ve.isGpsGeolocEnabled = "false";
+
+        $(document).ready(function () {
+            var headerForm = $('#header-search form');
+
+            if (false === headerForm.hasClass('search-applied')) {
+                headerForm.searchEngineForm({
+                    "loadInProgressMessage": "Chargement en cours... Veuillez patienter",
+                    "autoCompleteUrl": "/ajax/search/autocomplete.json",
+                    "autoCompleteCompanyLabel": "Société"
+                });
+            }
+        });
+
+    </script>
+<script type="text/javascript">
+    function closeAlertBanner() {
+        $("#alert-banner").hide();
+    }
+</script>
+
+<div class="header" id="header">
+    <div class="header-top container-wide" id="header-content">
+        <div class="row">
+            <div class="nav-top right">
+                <a verel="4=|pb2|cHR|3Jp|JzY|zdW|eS9|3Ry|R1c|pbm|Y3R|XJl|9ka|vbl|dF9|WJp|hoa|vZX|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="exhibit right" >Devenir exposant</a><div class="currency right">
+                    <div id="header-currency">
+    <ul id="header-currency-selector">
+        <li id="currencieslist" class="current-currency">
+            <div decorator="cloakRender">
+                <div class="data-cloak" id="header-currency-li">
+                    <span class="currency-item">{{>currencyLabel}}</span><i class="fa fa-caret-down"></i>
+                </div>
+            </div>
+            <ul id="header-currency-list">
+                <li class="header-currency-back-link">Retour</li>
+                {{>currenciesTemplate}}</ul>
+        </li>
+    </ul>
+</div>
+</div>
+                <div class="myspace right" id="header-links"></div>
+                <div class="lang right">
+                    <div id="header-language">
+    <ul id="header-language-selector">
+        <li class="current-language">
+            <i class="flag-16 fr"></i><span class="language-item">Français</span><i class="fa fa-caret-down"></i>
+
+            <ul id="header-language-list">
+                <li class="header-language-back-link">Retour</li>
+
+                <li>
+                        <a verel="w==|9tL|uY2|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="language-item" ><i class="flag-16 en"></i>
+                            <span>English</span>
+                        </a></li>
+                <li>
+                        <a verel="Mv|uZX|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="language-item" ><i class="flag-16 es"></i>
+                            <span>Español</span>
+                        </a></li>
+                <li>
+                        <a verel="Qv|uaX|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="language-item" ><i class="flag-16 it"></i>
+                            <span>Italiano</span>
+                        </a></li>
+                <li>
+                        <a verel="Uv|uZG|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="language-item" ><i class="flag-16 de"></i>
+                            <span>Deutsch</span>
+                        </a></li>
+                <li>
+                        <a verel="24v|EuY|pbm|Y2h|nkt|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="language-item" ><i class="flag-16 zh"></i>
+                            <span>中文</span>
+                        </a></li>
+                <li>
+                        <a verel="w==|phL|tL2|Y29|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="language-item" ><i class="flag-16 ja"></i>
+                            <span>日本語</span>
+                        </a></li>
+                <li>
+                        <a verel="w==|B0L|tL3|Y29|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="language-item" ><i class="flag-16 pt"></i>
+                            <span>português</span>
+                        </a></li>
+                <li>
+                        <a verel="w==|J1L|tLn|Y29|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="language-item" ><i class="flag-16 ru"></i>
+                            <span>Русский</span>
+                        </a></li>
+                </ul>
+        </li>
+    </ul>
+</div></div>
+                <div class="corner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="header-nav container-wide">
+        <div class="row">
+            <div class="logo inline-center">
+                <a href="https://www.directindustry.fr" ><img id="header-logo" src="https://img.directindustry.fr/media/ps/images/di/header/header-logo.svg" alt="La marketplace B2B de l'industrie" />
+                </a></div>
+
+            <div class="search col-lg-4 col-md-4 col-sm-6 col-xs-8">
+                <div id="header-search" class=" header-search" data-searchmax="12"
+
+     data-lastsearchmax="5" data-companysearchmax="5">
+    <form id="seachForm" action="/ajax/search/define-link.json" data-frequentsearchurl="/ajax/search/recommendation.json">
+        <div class="input-group">
+            <input class="input" type="text" name="searchTerms" value="" autocomplete="off" placeholder="Rechercher un produit, une marque…" />
+            <i class="fa fa-search mobile-search-icon"></i>
+            <div class="search-container">
+                <div class="search-content">
+                    <div class="search-col-left">
+                        <div class="last-search-container">
+                            <div class="search-block-title"><span>Vos dernières recherches</span><span class="search-block-title-delete"> Effacer</span></div>
+                            <div id="last-search-content"></div>
+                        </div>
+                        <div id="frequent-search-container">
+                            <span class="search-block-title">Recherches fréquentes</span>
+                            <div class="frequent-search-results"></div>
+                        </div>
+                        <div class="auto-complete-container">
+                            <span class="search-block-title">Suggestions</span>
+                            <div class="search-block-results"></div>
+                        </div>
+                    </div>
+                    <div class="search-col-right">
+                        <div class="category-search-container">
+                            <div class="search-block-title">Autres rubriques</div>
+                            <div class="category-search-link-container ">
+                                <a id="catalog-search-link" href="">Rechercher {0} dans Catalogues</a>
+                                <a id="project-search-link" href="">Rechercher {0} dans Projets</a>
+                                    <a id="news-search-link" href="">Rechercher {0} dans News & Trends</a>
+                                </div>
+                        </div>
+                        <div class="brand-search-container">
+                            <div id="brand-search-title" class="search-block-title"><span>Marques contenant {0}</span></div>
+                            <div id="brand-search-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="input-group-item header-search-buttons">
+                <div id="header-search-delete"></div>
+                <button id="header-search-launch-button" class="btn" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+</div>
+
+            <ul class="nav col-lg-6 col-md-6 col-sm-12 col-xs-12 right" id="header-nav">
+                <li id="header-products" on-hover="loadMenu('products')">
+        <div decorator="cloakRender">
+                <div class="data-cloak" id="productsMenu">
+                    {{>productsMenu}}
+                </div>
+            </div>
+        <a href="https://www.directindustry.fr/" target="_self" >Produits<i class="fa fa-angle-down"></i>
+            </a></li>
+<li id="header-catalogs" >
+        <a href="https://pdf.directindustry.fr/" target="_self" >Catalogues</a></li>
+<li id="header-rfq" >
+        <a verel="A==|Rtb|uaH|cm0|2Zv|ZxL|vcm|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" target="_self" >RFQ</a></li>
+<li id="header-trends" on-hover="loadMenu('trends')"class="actif">
+        <div decorator="cloakRender">
+                <div class="data-cloak" id="trendsMenu">
+                    {{>trendsMenu}}
+                </div>
+            </div>
+        <a href="https://trends.directindustry.fr/" target="_self" >News & Trends<i class="fa fa-angle-down"></i>
+            </a></li>
+<li id="header-emags" >
+        <a verel="==|vbQ|LmN|HJ5|Vzd|uZH|dGl|mVj|Rpc|nLm|bWF|y9l|M6L|0cH|aHR" target="_blank" >E-MAGAZINE</a></li>
+</ul>
+        </div>
+    </div>
+    <input type="hidden" id="widthBannerDesktop" name="widthBannerDesktop" value="1920">
+<input type="hidden" id="heightBannerDesktop" name="heightBannerDesktop" value="330">
+<input type="hidden" id="widthBannerMobile" name="widthBannerMobile" value="1175">
+<input type="hidden" id="heightBannerMobile" name="heightBannerMobile" value="440">
+<input type="hidden" id="routeId" name="route" value="route.trends.home">
+
+<div id="header-br" style="margin:0px auto; display: block !important">
+    <div id="display-ads-button-list"></div>
+    <div id="display-banner-container">
+        <script type="text/javascript">
+            if (typeof (dimensionContainers) === 'function') {
+                dimensionContainers(false, false);
+            }
+        </script>
+    </div>
+    <script type="text/javascript">
+            $(document).ready(function () {
+                loadBanners();
+            });
+        </script>
+    </div>
+</div>
+<div class="mobile-header" id="mobile-header">
+    <div class="header-wrapper">
+        <div class="mobile-header-placeholder">
+            <div class="header-menu collapsed" >
+                <div class="header-menu-link-wrapper">
+                    <div class="header-menu-link-box">
+                        <div class="header-menu-link-inner" ></div>
+                    </div>
+                </div>
+                <div class="header-menu-wrapper" >
+                    <div class="header-menu-content" ></div>
+                </div>
+            </div>
+            <div class="logo"></div>
+            <div class="header-right-menu">
+                <div class="header-account" >
+                    <div class="header-account-link"></div>
+                </div>
+                <div class="header-search-action collapsed" >
+                    <div class="header-search-link-wrapper">
+                        <div class="header-search-link"></div>
+                    </div>
+                    <div class="header-search-wrapper">
+
+                        <div class="header-search-section">
+                            <div class="header-search-content"></div>
+                            <div class="header-search-close"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+            if (typeof (dimensionContainers) === 'function') {
+                let dimensionMobileHeader = true;
+                let isPageTr = false;
+                dimensionContainers(dimensionMobileHeader, isPageTr);
+            }
+        </script>
+    </div>
+<div id="main" class="container">
+                    <div class="project-container" >
+    <div class="container">
+        <div class="hidden">
+                <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <ul class="univers-group">
+                                <li class="univers-group-item" on-click="">
+                                    <span title="Tendances produits">
+                                        <a href="https://trends.directindustry.fr/type/tendances-produits-2.html" >Tendances produits</a></span>
+                                    </li>
+                            </ul>
+                        <ul class="univers-group">
+                                <li class="univers-group-item" on-click="">
+                                    <span title="Actualit&eacute;s du secteur">
+                                        <a href="https://trends.directindustry.fr/type/actualites-secteur-3.html" >Actualités du secteur</a></span>
+                                    </li>
+                            </ul>
+                        <ul class="univers-group">
+                                <li class="univers-group-item" on-click="">
+                                    <span title="People">
+                                        <a href="https://trends.directindustry.fr/type/people-4.html" >People</a></span>
+                                    </li>
+                            </ul>
+                        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <ul class="univers-group">
+                                <li class="univers-group-item" on-click="">
+                                    <span title="Salons et &eacute;v&egrave;nements">
+                                        <a href="https://trends.directindustry.fr/type/salons-evenements-5.html" >Salons et évènements</a></span>
+                                    </li>
+                            </ul>
+                        <ul class="univers-group">
+                                <li class="univers-group-item" on-click="">
+                                    <span title="Livres blancs">
+                                        <a href="https://trends.directindustry.fr/type/livres-blancs-6.html" >Livres blancs</a></span>
+                                    </li>
+                            </ul>
+                        </div>
+        </div>
+</div>
+            <div class="row">
+                <div class="col-sm-3">&nbsp;</div>
+            </div>
+        <div id="projects">
+            <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <h1 class="main-title"><span>Liste des tendances dans l'industrie</span></h1>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 inline-right">
+                            <div class="project-counter">
+                                <span class="strong">20 266</span>trends</div>
+                        </div>
+                    </div>
+                    <div id="project-list" class="project-list">
+                        <div class="row">
+                            <div class="data-cloak"
+     data-placement="9"
+     data-push="{'searchTerm':'','placementId': 9, 'projectsSize': 4,'categoryId':'','subCategoryId':'','typeId':''}">
+    {{#pushedProjectsPlacement9.length}}
+    {{#each pushedProjectsPlacement9}}
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <div id="{{project.id}}" class="inset" data-placement="9" data-id="{{project.id}}" data-companyid="{{project.company.id}}"
+             data-campaignid="{{project.campaignId}}">
+            <a decorator="linkRender:'{{project.linkUrl}}'" class="inset-hover">
+                <div class="description">
+                    <div class="description-content">
+                        <div class="publicationDate">
+                            Publié (e) le {{project.publicationDate}}</div>
+                        <div class="subtitle">{{project.subTitle.substring(1024)}}</div>
+                        <p>{{project.description.substring(376)}}</p>
+                    </div>
+                    <div class="description-footer inline-center">
+                        <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="inline-center">
+                <div class="inset-img" on-click="openProjectDetail(project.id)">
+                    <a decorator="linkRender:'{{project.linkUrl}}'">
+                        <img class="{{lazyLoadedClass}}" alt="{{project.name}}" src="data:image/gif;base64,R0lGODlhAQABAIAAAP7//wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{project.imageUrl}}" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="row inset-caption">
+                <div class="{{#if project.company}}col-lg-8 col-md-8 col-sm-8 col-xs-8{{else}}col-lg-12 col-md-12 col-sm-12 col-xs-12{{/if}}" on-click="openProjectDetail(project.id)">
+                    <a decorator="linkRender:'{{project.linkUrl}}'" title="{{{project.name}}}">
+                        {{#if project.autoTranslated}}
+                        <span class="short-name">{{{project.nameForDefaultLanguage}}}</span>
+                        {{else}}
+                        <span class="short-name">{{{project.name}}}</span>
+                        {{/if}}
+                    </a>
+                </div>
+                {{#if project.company}}
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a decorator="linkRender:'{{project.company.linkUrl}}'">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP7//wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{project.company.name}}" data-src="{{project.company.imageUrl}}" class="logo right {{lazyLoadedClass}}" title="{{project.company.name}}" />
+                    </a>
+                </div>
+                {{/if}}
+                {{{#if showDetailedInfos}}
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <span class="short-name">(Statut : {{project.starRank}}&nbsp; {{project.publicationDate}})</span>
+                </div>
+                {{/if}}
+            </div>
+            <div class="ads-icon"><i class="fa fa-bookmark"></i> {{projectPushLabel}}</div>
+        </div>
+    </div>
+    {{/each}}
+    {{/pushedProjectsPlacement9.length}}
+</div>
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180440">
+    <div id="1180440" class="inset">
+        <a verel="Ww=|h0b|wLm|NDQ|Tgw|0xM|wNy|NzQ|C0x|Vjd|vam|cHJ|mQv|Jvb|yLW|dGV|WFz|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 29/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180440].subTitle}}</div>
+                        <p>{{projects[1180440].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180440')">
+                <a verel="Ww=|h0b|wLm|NDQ|Tgw|0xM|wNy|NzQ|C0x|Vjd|vam|cHJ|mQv|Jvb|yLW|dGV|WFz|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180440-21088537.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180440')">
+                <a href="https://trends.directindustry.fr/master-bond/project-17407-1180440.html" ><span class="hidden">Epoxy structural à une partie pour des applications de collage à haute performance</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/master-bond-17407.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L17407.gif" title="Master Bond"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180380">
+    <div id="1180380" class="inset">
+        <a verel="A==|Rtb|uaH|ODA|DAz|ExO|wLT|ODA|TY5|N0L|qZW|cm9|C9w|x0Z|vLW|LWN|2Vy|xhc|uLW|ZGV|29s|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 29/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180380].subTitle}}</div>
+                        <p>{{projects[1180380].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180380')">
+                <a verel="A==|Rtb|uaH|ODA|DAz|ExO|wLT|ODA|TY5|N0L|qZW|cm9|C9w|x0Z|vLW|LWN|2Vy|xhc|uLW|ZGV|29s|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180380-21082497.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180380')">
+                <a href="https://trends.directindustry.fr/golden-laser-co-ltd/project-69800-1180380.html" ><span class="hidden">Golden Laser lance le Cell 5030S : La nouvelle norme pour la précision des lasers à fibre 3D à cinq axes</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/golden-laser-co-ltd-69800.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L69800.gif" title="Golden Laser Co., Ltd"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180407">
+    <div id="1180407" class="inset">
+        <a verel="G1s|5od|wNy|MDQ|TE4|ItM|1Mz|MDc|TQ2|N0L|qZW|cm9|C9w|x0Z|sLW|ZWx|WF4|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 28/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180407].subTitle}}</div>
+                        <p>{{projects[1180407].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180407')">
+                <a verel="G1s|5od|wNy|MDQ|TE4|ItM|1Mz|MDc|TQ2|N0L|qZW|cm9|C9w|x0Z|sLW|ZWx|WF4|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180407-21086038.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180407')">
+                <a href="https://trends.directindustry.fr/maxell-ltd/project-4607532-1180407.html" ><span class="hidden">Le déploiement test des robots industriels alimentés par les modules d'alimentation à batterie à l'état solide de Maxell commence à l'usine Kyocera de Kagoshima Sendai</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/maxell-ltd-4607532.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L4607532.gif" title="Maxell, Ltd."/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180416">
+    <div id="1180416" class="inset">
+        <a verel="A==|Rtb|uaH|MTY|DA0|ExO|5LT|NTg|TU3|QtM|lY3|b2p|3By|1zL|0ZW|eXN|y1z|luZ|hbG|c2V|24t|Npb|jaX|cmV|i1w|Nvb|pbn|Y2h|HV0|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 28/01/2026</div>
+                    <div class="">
+                        <div class="subtitle">Hutchinson présente ses solutions hydrogène à Hyvolution 2026</div>
+                        <p>Hutchinson participera à Hyvolution 2026, du 27 au 29 janvier à Paris Porte de Versailles. L’événement sera l’occasion de présenter notre savoir‑faire et nos technologies au service des applications hydrogène.
+Nous mettrons en avant nos solutions d’étanchéité, notre expertise en gestion des fluides, nos solutions antivibratoires ainsi que nos technologies de protection d...</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180416')">
+                <a verel="A==|Rtb|uaH|MTY|DA0|ExO|5LT|NTg|TU3|QtM|lY3|b2p|3By|1zL|0ZW|eXN|y1z|luZ|hbG|c2V|24t|Npb|jaX|cmV|i1w|Nvb|pbn|Y2h|HV0|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180416-21086599.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180416')">
+                <a href="https://trends.directindustry.fr/hutchinson-precision-sealing-systems/project-157589-1180416.html" ><span class="short-name">Hyvolution 2026</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/hutchinson-precision-sealing-systems-157589.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L157589.gif" title="Hutchinson Precision Sealing Systems"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180422">
+    <div id="1180422" class="inset">
+        <a verel="1s|odG|Mi5|DQy|E4M|tMT|MTU|zQ1|QtM|lY3|b2p|3By|JoL|nbW|cy1|GVt|lzd|tc3|bnQ|G1l|xvc|2ZW|ZGV|mct|dpb|tYW|LWl|WRz|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 28/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180422].subTitle}}</div>
+                        <p>{{projects[1180422].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180422')">
+                <a verel="1s|odG|Mi5|DQy|E4M|tMT|MTU|zQ1|QtM|lY3|b2p|3By|JoL|nbW|cy1|GVt|lzd|tc3|bnQ|G1l|xvc|2ZW|ZGV|mct|dpb|tYW|LWl|WRz|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180422-21086831.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180422')">
+                <a href="https://trends.directindustry.fr/ids-imaging-development-systems-gmbh/project-34515-1180422.html" ><span class="hidden">IDS reçoit le TRUMPF Supplier Award pour son innovation</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/ids-imaging-development-systems-gmbh-34515.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L34515.gif" title="IDS Imaging Development Systems GmbH"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180402">
+    <div id="1180402" class="inset">
+        <a verel="w=|0bW|Lmh|DAy|gwN|xMT|My0|zkx|QtN|lY3|b2p|3By|NoL|0ZW|dm9|3Jh|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 27/01/2026</div>
+                    <div class="">
+                        <div class="subtitle">Un espace pensé pour les intégrateurs qui veulent gagner du temps et fiabiliser leurs projets</div>
+                        <p>Pour un intégrateur, l’objectif est simple : intégrer le marquage industriel à la ligne sans perturber le cycle, tout en assurant fiabilité, répétabilité et maintenance rapide.
+C’est précisément pour répondre à ces enjeux que Gravotech met en ligne une page dédiée : l’Espace intégrateurs.
+
+UN POINT D’ENTRÉE UNIQUE POUR GAGNER DU TEMPS D’INGÉNIERIE
+Cette nouvelle page ras...</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180402')">
+                <a verel="w=|0bW|Lmh|DAy|gwN|xMT|My0|zkx|QtN|lY3|b2p|3By|NoL|0ZW|dm9|3Jh|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180402-21084065.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180402')">
+                <a href="https://trends.directindustry.fr/gravotech/project-7913-1180402.html" ><span class="short-name">NOUVEAU Espace intégrateurs Gravotech : Marquage industriel sur les lignes de production</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/gravotech-7913.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L7913.gif" title="Gravotech"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180311">
+    <div id="1180311" class="inset">
+        <a verel="G1s|5od|xMS|MDM|TE4|ItM|1Mz|MDc|TQ2|N0L|qZW|cm9|C9w|x0Z|sLW|ZWx|WF4|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 27/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180311].subTitle}}</div>
+                        <p>{{projects[1180311].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180311')">
+                <a verel="G1s|5od|xMS|MDM|TE4|ItM|1Mz|MDc|TQ2|N0L|qZW|cm9|C9w|x0Z|sLW|ZWx|WF4|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180369-21082023.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180311')">
+                <a href="https://trends.directindustry.fr/maxell-ltd/project-4607532-1180311.html" ><span class="hidden">Maxell développe un module d'alimentation de batterie à l'état solide compatible avec la taille de la batterie ER</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/maxell-ltd-4607532.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L4607532.gif" title="Maxell, Ltd."/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180374">
+    <div id="1180374" class="inset">
+        <a verel="Ww=|h0b|0Lm|Mzc|Tgw|0xM|4NC|NTc|C0z|Vjd|vam|cHJ|mMv|1pb|0ZS|bWF|2lu|Ivd|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 27/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180374].subTitle}}</div>
+                        <p>{{projects[1180374].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180374')">
+                <a verel="Ww=|h0b|0Lm|Mzc|Tgw|0xM|4NC|NTc|C0z|Vjd|vam|cHJ|mMv|1pb|0ZS|bWF|2lu|Ivd|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180374-21082167.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180374')">
+                <a href="https://trends.directindustry.fr/winmate-inc/project-35784-1180374.html" ><span class="hidden">Winmate présente les PC Panel HMI 10,1" et 7" Alder Lake-N</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/winmate-inc-35784.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L35784.gif" title="Winmate, Inc."/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180288">
+    <div id="1180288" class="inset">
+        <a verel="A==|Rtb|uaH|ODg|DAy|ExO|xLT|Mzk|C01|Vjd|vam|cHJ|3Mv|JpY|ldH|YW1|GFu|Ivc|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 26/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180288].subTitle}}</div>
+                        <p>{{projects[1180288].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180288')">
+                <a verel="A==|Rtb|uaH|ODg|DAy|ExO|xLT|Mzk|C01|Vjd|vam|cHJ|3Mv|JpY|ldH|YW1|GFu|Ivc|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180288-21076140.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180288')">
+                <a href="https://trends.directindustry.fr/panametrics/project-5391-1180288.html" ><span class="hidden">Les analyseurs Panametrics fournissent des mesures rapides, stables et précises</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/panametrics-5391.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L5391.gif" title="Panametrics"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180319">
+    <div id="1180319" class="inset">
+        <a verel="==|tbA|aHR|Tku|AzM|xOD|LTE|zUy|U0N|0LT|ZWN|m9q|9wc|0ZC|LWx|WNv|50L|tZW|cnV|nN0|1pb|uZC|LWF|29y|Vuc|tc2|aWM|3Vi|IvY|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 26/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180319].subTitle}}</div>
+                        <p>{{projects[1180319].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180319')">
+                <a verel="==|tbA|aHR|Tku|AzM|xOD|LTE|zUy|U0N|0LT|ZWN|m9q|9wc|0ZC|LWx|WNv|50L|tZW|cnV|nN0|1pb|uZC|LWF|29y|Vuc|tc2|aWM|3Vi|IvY|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180319-21079001.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180319')">
+                <a href="https://trends.directindustry.fr/cubic-sensor-and-instrument-co-ltd/project-54752-1180319.html" ><span class="hidden">Solutions intégrées de Cubic pour les capteurs de qualité de l'air dans l'automobile</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/cubic-sensor-and-instrument-co-ltd-54752.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L54752.gif" title="Cubic Sensor and Instrument Co.,Ltd"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180331">
+    <div id="1180331" class="inset">
+        <a verel="Ww=|h0b|xLm|MzM|Tgw|0xM|xMy|ODc|C0y|Vjd|vam|cHJ|2Uv|ctc|3ZW|dHR|mxv|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 26/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180331].subTitle}}</div>
+                        <p>{{projects[1180331].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180331')">
+                <a verel="Ww=|h0b|xLm|MzM|Tgw|0xM|xMy|ODc|C0y|Vjd|vam|cHJ|2Uv|ctc|3ZW|dHR|mxv|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180331-21079697.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180331')">
+                <a href="https://trends.directindustry.fr/flottweg-se/project-28713-1180331.html" ><span class="hidden">Flottwegs Brewer Control</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/flottweg-se-28713.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L28713.gif" title="Flottweg SE"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180228">
+    <div id="1180228" class="inset">
+        <a verel="=|bWw|mh0|I4L|wMj|MTg|i0x|gzN|xNz|dC0|mVj|Jva|vcH|aXI|Xhh|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 23/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180228].subTitle}}</div>
+                        <p>{{projects[1180228].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180228')">
+                <a verel="=|bWw|mh0|I4L|wMj|MTg|i0x|gzN|xNz|dC0|mVj|Jva|vcH|aXI|Xhh|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180285-21075375.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180228')">
+                <a href="https://trends.directindustry.fr/exair/project-17836-1180228.html" ><span class="hidden">Nouveau berceau d'air pour un stockage rapide et efficace des pistolets à air comprimé</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/exair-17836.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L17836.gif" title="EXAIR"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180250">
+    <div id="1180250" class="inset">
+        <a verel="Ww=|h0b|wLm|MjU|Tgw|0xM|2Ny|MTE|TE2|N0L|qZW|cm9|C9w|x0Z|vLW|LWN|W50|VtZ|0cn|bnN|y1p|luZ|leW|cnZ|XN1|V0L|yZ2|dGF|Gkt|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 23/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180250].subTitle}}</div>
+                        <p>{{projects[1180250].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180250')">
+                <a verel="Ww=|h0b|wLm|MjU|Tgw|0xM|2Ny|MTE|TE2|N0L|qZW|cm9|C9w|x0Z|vLW|LWN|W50|VtZ|0cn|bnN|y1p|luZ|leW|cnZ|XN1|V0L|yZ2|dGF|Gkt|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180250-21071048.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180250')">
+                <a href="https://trends.directindustry.fr/hi-target-surveying-instrument-co-ltd/project-161167-1180250.html" ><span class="hidden">Hi-Target participe au salon TSW Poland 2026 à Kielce</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/hi-target-surveying-instrument-co-ltd-161167.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L161167.gif" title="Hi-Target Surveying Instrument Co.,Ltd"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1179296">
+    <div id="1179296" class="inset">
+        <a verel="s|dG1|i5o|I5N|3OT|MTE|TYt|MwO|2MT|LTQ|WN0|9qZ|wcm|cy9|2ll|xvZ|ub2|Y2h|XRl|9uL|0aW|ZWN|nNw|1pb|udC|ZGV|XZp|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 22/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1179296].subTitle}}</div>
+                        <p>{{projects[1179296].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1179296')">
+                <a verel="s|dG1|i5o|I5N|3OT|MTE|TYt|MwO|2MT|LTQ|WN0|9qZ|wcm|cy9|2ll|xvZ|ub2|Y2h|XRl|9uL|0aW|ZWN|nNw|1pb|udC|ZGV|XZp|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180253-21071283.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1179296')">
+                <a href="https://trends.directindustry.fr/evident-inspection-technologies/project-4613096-1179296.html" ><span class="hidden">Webinaire en direct</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/evident-inspection-technologies-4613096.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L4613096.gif" title="EVIDENT – Inspection Technologies"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180193">
+    <div id="1180193" class="inset">
+        <a verel="=|bWw|mh0|kzL|wMT|MTg|S0x|Q5O|xND|LTE|WN0|9qZ|wcm|by9|GVj|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 21/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180193].subTitle}}</div>
+                        <p>{{projects[1180193].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180193')">
+                <a verel="=|bWw|mh0|kzL|wMT|MTg|S0x|Q5O|xND|LTE|WN0|9qZ|wcm|by9|GVj|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180193-21069637.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180193')">
+                <a href="https://trends.directindustry.fr/leco/project-114499-1180193.html" ><span class="hidden">Analytica</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/leco-114499.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L114499.gif" title="LECO"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180197">
+    <div id="1180197" class="inset">
+        <a verel="=|bWw|mh0|k3L|wMT|MTg|S0x|Q5O|xND|LTE|WN0|9qZ|wcm|by9|GVj|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 21/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180197].subTitle}}</div>
+                        <p>{{projects[1180197].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180197')">
+                <a verel="=|bWw|mh0|k3L|wMT|MTg|S0x|Q5O|xND|LTE|WN0|9qZ|wcm|by9|GVj|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180197-21068594.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180197')">
+                <a href="https://trends.directindustry.fr/leco/project-114499-1180197.html" ><span class="hidden">Ce que vous ne voyez pas : Au-delà de l'analyse de routine avec LC-GCxGC-TOFMS-FID</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/leco-114499.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L114499.gif" title="LECO"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180200">
+    <div id="1180200" class="inset">
+        <a verel="=|bWw|mh0|AwL|wMj|MTg|S0x|Q5O|xND|LTE|WN0|9qZ|wcm|by9|GVj|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 21/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180200].subTitle}}</div>
+                        <p>{{projects[1180200].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180200')">
+                <a verel="=|bWw|mh0|AwL|wMj|MTg|S0x|Q5O|xND|LTE|WN0|9qZ|wcm|by9|GVj|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180200-21068622.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180200')">
+                <a href="https://trends.directindustry.fr/leco/project-114499-1180200.html" ><span class="hidden">Stratégie avancée de GCxGC-MS pour l'analyse des pesticides dans une matrice de piments très complexe</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/leco-114499.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L114499.gif" title="LECO"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180206">
+    <div id="1180206" class="inset">
+        <a verel="=|bWw|mh0|A2L|wMj|MTg|S0x|Q5O|xND|LTE|WN0|9qZ|wcm|by9|GVj|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 21/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180206].subTitle}}</div>
+                        <p>{{projects[1180206].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180206')">
+                <a verel="=|bWw|mh0|A2L|wMj|MTg|S0x|Q5O|xND|LTE|WN0|9qZ|wcm|by9|GVj|Ivb|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180206-21068916.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180206')">
+                <a href="https://trends.directindustry.fr/leco/project-114499-1180206.html" ><span class="hidden">LECODays Nordic 2026</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/leco-114499.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L114499.gif" title="LECO"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180185">
+    <div id="1180185" class="inset">
+        <a verel="1s|odG|NS5|DE4|E4M|tMT|MTU|zQ1|QtM|lY3|b2p|3By|JoL|nbW|cy1|GVt|lzd|tc3|bnQ|G1l|xvc|2ZW|ZGV|mct|dpb|tYW|LWl|WRz|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 21/01/2026</div>
+                    <div class="">
+                        <div class="subtitle">IDS élargit sa gamme de services : Garantie fabricant de trois ans</div>
+                        <p>IDS Imaging Development Systems GmbH (Allemagne), fabricant leader de caméras industrielles, est désormais le seul fournisseur du secteur à proposer une garantie fabricant de 3 ans sur toutes les gammes de caméras IDS. Avec ce service supplémentaire, IDS établit de nouvelles normes en matière de qualité, de fiabilité et de sécurité d&#039;investissement à long terme.
+
+La gara...</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180185')">
+                <a verel="1s|odG|NS5|DE4|E4M|tMT|MTU|zQ1|QtM|lY3|b2p|3By|JoL|nbW|cy1|GVt|lzd|tc3|bnQ|G1l|xvc|2ZW|ZGV|mct|dpb|tYW|LWl|WRz|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180209-21069452.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180185')">
+                <a href="https://trends.directindustry.fr/ids-imaging-development-systems-gmbh/project-34515-1180185.html" ><span class="short-name">Sécurité maximale et protection à long terme de l'investissement pour les projets de traitement d'images</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/ids-imaging-development-systems-gmbh-34515.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L34515.gif" title="IDS Imaging Development Systems GmbH"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180210">
+    <div id="1180210" class="inset">
+        <a verel="s|dG1|C5o|IxM|4MD|MTE|jMt|YyM|tMT|Y3Q|2pl|Byb|hL3|LXN|WNr|J3a|3YX|by1|2Vj|Ivc|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 21/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180210].subTitle}}</div>
+                        <p>{{projects[1180210].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180210')">
+                <a verel="s|dG1|C5o|IxM|4MD|MTE|jMt|YyM|tMT|Y3Q|2pl|Byb|hL3|LXN|WNr|J3a|3YX|by1|2Vj|Ivc|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180210-21069524.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180210')">
+                <a href="https://trends.directindustry.fr/seco-warwick-sa/project-16223-1180210.html" ><span class="hidden">SECO/WARWICK assure la livraison express à l'usine de trempe More Heat Treatment A.S. en Turquie</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/seco-warwick-sa-16223.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L16223.gif" title="SECO/WARWICK S.A."/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180211">
+    <div id="1180211" class="inset">
+        <a verel="s|dG1|S5o|IxM|4MD|MTE|jMt|YyM|tMT|Y3Q|2pl|Byb|hL3|LXN|WNr|J3a|3YX|by1|2Vj|Ivc|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 21/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180211].subTitle}}</div>
+                        <p>{{projects[1180211].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180211')">
+                <a verel="s|dG1|S5o|IxM|4MD|MTE|jMt|YyM|tMT|Y3Q|2pl|Byb|hL3|LXN|WNr|J3a|3YX|by1|2Vj|Ivc|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180211-21069528.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180211')">
+                <a href="https://trends.directindustry.fr/seco-warwick-sa/project-16223-1180211.html" ><span class="hidden">Un fabricant d'implants orthopédiques acquiert un troisième four SECO/WARWICK</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/seco-warwick-sa-16223.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L16223.gif" title="SECO/WARWICK S.A."/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180213">
+    <div id="1180213" class="inset">
+        <a verel="s|dG1|y5o|IxM|4MD|MTE|jMt|YyM|tMT|Y3Q|2pl|Byb|hL3|LXN|WNr|J3a|3YX|by1|2Vj|Ivc|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 21/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180213].subTitle}}</div>
+                        <p>{{projects[1180213].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180213')">
+                <a verel="s|dG1|y5o|IxM|4MD|MTE|jMt|YyM|tMT|Y3Q|2pl|Byb|hL3|LXN|WNr|J3a|3YX|by1|2Vj|Ivc|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180213-21069574.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180213')">
+                <a href="https://trends.directindustry.fr/seco-warwick-sa/project-16223-1180213.html" ><span class="hidden">Commande de four LPC - de SECO/WARWICK</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/seco-warwick-sa-16223.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L16223.gif" title="SECO/WARWICK S.A."/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1179989">
+    <div id="1179989" class="inset">
+        <a verel="s|dG1|S5o|k4O|3OT|MTE|TYt|MwO|2MT|LTQ|WN0|9qZ|wcm|cy9|2ll|xvZ|ub2|Y2h|XRl|9uL|0aW|ZWN|nNw|1pb|udC|ZGV|XZp|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 20/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1179989].subTitle}}</div>
+                        <p>{{projects[1179989].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1179989')">
+                <a verel="s|dG1|S5o|k4O|3OT|MTE|TYt|MwO|2MT|LTQ|WN0|9qZ|wcm|cy9|2ll|xvZ|ub2|Y2h|XRl|9uL|0aW|ZWN|nNw|1pb|udC|ZGV|XZp|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180255-21071299.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1179989')">
+                <a href="https://trends.directindustry.fr/evident-inspection-technologies/project-4613096-1179989.html" ><span class="hidden">Webinaire en direct</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/evident-inspection-technologies-4613096.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L4613096.gif" title="EVIDENT – Inspection Technologies"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180153">
+    <div id="1180153" class="inset">
+        <a verel="Ww=|h0b|zLm|MTU|Tgw|0xM|2Ny|MTE|TE2|N0L|qZW|cm9|C9w|x0Z|vLW|LWN|W50|VtZ|0cn|bnN|y1p|luZ|leW|cnZ|XN1|V0L|yZ2|dGF|Gkt|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 20/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180153].subTitle}}</div>
+                        <p>{{projects[1180153].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180153')">
+                <a verel="Ww=|h0b|zLm|MTU|Tgw|0xM|2Ny|MTE|TE2|N0L|qZW|cm9|C9w|x0Z|vLW|LWN|W50|VtZ|0cn|bnN|y1p|luZ|leW|cnZ|XN1|V0L|yZ2|dGF|Gkt|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180153-21066043.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180153')">
+                <a href="https://trends.directindustry.fr/hi-target-surveying-instrument-co-ltd/project-161167-1180153.html" ><span class="hidden">Hi-Target expose ses technologies d'agriculture de précision et d'autoguidage à l'AGROmashEXPO 2026</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/hi-target-surveying-instrument-co-ltd-161167.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L161167.gif" title="Hi-Target Surveying Instrument Co.,Ltd"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180167">
+    <div id="1180167" class="inset">
+        <a verel="s|dG1|y5o|E2N|4MD|MTE|zMt|UwN|0LT|ZWN|m9q|9wc|vbi|dHJ|29u|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 20/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180167].subTitle}}</div>
+                        <p>{{projects[1180167].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180167')">
+                <a verel="s|dG1|y5o|E2N|4MD|MTE|zMt|UwN|0LT|ZWN|m9q|9wc|vbi|dHJ|29u|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180167-21066373.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180167')">
+                <a href="https://trends.directindustry.fr/kontron/project-5073-1180167.html" ><span class="hidden">Kontron présente le Single Board Computer 3.5"-SBC-PTL avec les processeurs Intel® CoreTM Ultra (nom de code 'Panther Lake')</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/kontron-5073.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L5073.gif" title="Kontron"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180165">
+    <div id="1180165" class="inset">
+        <a verel="s|dG1|S5o|E2N|4MD|MTE|zMt|UwN|0LT|ZWN|m9q|9wc|vbi|dHJ|29u|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 20/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180165].subTitle}}</div>
+                        <p>{{projects[1180165].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180165')">
+                <a verel="s|dG1|S5o|E2N|4MD|MTE|zMt|UwN|0LT|ZWN|m9q|9wc|vbi|dHJ|29u|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180165-21066315.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180165')">
+                <a href="https://trends.directindustry.fr/kontron/project-5073-1180165.html" ><span class="hidden">Des solutions de moulage par injection de pointe pour des applications de haute qualité</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/kontron-5073.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L5073.gif" title="Kontron"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1179974">
+    <div id="1179974" class="inset">
+        <a verel="A==|Rtb|uaH|NzQ|zk5|ExN|wLT|ODA|TY5|N0L|qZW|cm9|C9w|x0Z|vLW|LWN|2Vy|xhc|uLW|ZGV|29s|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 19/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1179974].subTitle}}</div>
+                        <p>{{projects[1179974].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1179974')">
+                <a verel="A==|Rtb|uaH|NzQ|zk5|ExN|wLT|ODA|TY5|N0L|qZW|cm9|C9w|x0Z|vLW|LWN|2Vy|xhc|uLW|ZGV|29s|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180182-21067832.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1179974')">
+                <a href="https://trends.directindustry.fr/golden-laser-co-ltd/project-69800-1179974.html" ><span class="hidden">Maîtriser le profil de 1,2 tonne : La révolution zéro déchet de la Mega3-3D dans la fabrication de charges lourdes</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/golden-laser-co-ltd-69800.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L69800.gif" title="Golden Laser Co., Ltd"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180126">
+    <div id="1180126" class="inset">
+        <a verel="=|bWw|mh0|I2L|wMT|MTg|S0x|k2N|xMz|dC0|mVj|Jva|vcH|aWs|m9u|t0c|sZW|LWV|S1l|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 19/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180126].subTitle}}</div>
+                        <p>{{projects[1180126].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180126')">
+                <a verel="=|bWw|mh0|I2L|wMT|MTg|S0x|k2N|xMz|dC0|mVj|Jva|vcH|aWs|m9u|t0c|sZW|LWV|S1l|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180126-21063150.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180126')">
+                <a href="https://trends.directindustry.fr/e-e-elektronik/project-13965-1180126.html" ><span class="hidden">Gagner du temps et de l'argent grâce à la mesure de l'humidité</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/e-e-elektronik-13965.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L13965.gif" title="E+E ELEKTRONIK"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180128">
+    <div id="1180128" class="inset">
+        <a verel="=|bWw|mh0|I4L|wMT|MTg|S0x|k2N|xMz|dC0|mVj|Jva|vcH|aWs|m9u|t0c|sZW|LWV|S1l|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 19/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180128].subTitle}}</div>
+                        <p>{{projects[1180128].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180128')">
+                <a verel="=|bWw|mh0|I4L|wMT|MTg|S0x|k2N|xMz|dC0|mVj|Jva|vcH|aWs|m9u|t0c|sZW|LWV|S1l|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180128-21063175.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180128')">
+                <a href="https://trends.directindustry.fr/e-e-elektronik/project-13965-1180128.html" ><span class="hidden">Surveillance de l'environnement dans l'industrie pharmaceutique : comment choisir la bonne technologie de capteur pour les machines de l'industrie pharmaceutique</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/e-e-elektronik-13965.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L13965.gif" title="E+E ELEKTRONIK"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180130">
+    <div id="1180130" class="inset">
+        <a verel="==|tbA|aHR|zAu|AxM|xOD|LTE|jU3|0xN|jdC|amV|HJv|8vc|jaW|c29|28t|5pY|tdW|b24|S1j|NwY|yLX|ZGV|mlu|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 19/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180130].subTitle}}</div>
+                        <p>{{projects[1180130].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180130')">
+                <a verel="==|tbA|aHR|zAu|AxM|xOD|LTE|jU3|0xN|jdC|amV|HJv|8vc|jaW|c29|28t|5pY|tdW|b24|S1j|NwY|yLX|ZGV|mlu|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180130-21063746.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180130')">
+                <a href="https://trends.directindustry.fr/finder-spa-con-unico-socio/project-1657-1180130.html" ><span class="hidden">sSR de la série 77 : Des performances efficaces et une gestion thermique avancée pour l'industrie 4.0.</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/finder-spa-con-unico-socio-1657.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L1657.gif" title="FINDER S.p.A. con unico socio"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180115">
+    <div id="1180115" class="inset">
+        <a verel="==|tbA|aHR|TUu|AxM|xOD|LTE|zUy|U0N|0LT|ZWN|m9q|9wc|0ZC|LWx|WNv|50L|tZW|cnV|nN0|1pb|uZC|LWF|29y|Vuc|tc2|aWM|3Vi|IvY|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 19/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180115].subTitle}}</div>
+                        <p>{{projects[1180115].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180115')">
+                <a verel="==|tbA|aHR|TUu|AxM|xOD|LTE|zUy|U0N|0LT|ZWN|m9q|9wc|0ZC|LWx|WNv|50L|tZW|cnV|nN0|1pb|uZC|LWF|29y|Vuc|tc2|aWM|3Vi|IvY|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180115-21062743.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180115')">
+                <a href="https://trends.directindustry.fr/cubic-sensor-and-instrument-co-ltd/project-54752-1180115.html" ><span class="hidden">Solutions cubiques de mesure de gaz par ultrasons pour les applications commerciales</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/cubic-sensor-and-instrument-co-ltd-54752.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L54752.gif" title="Cubic Sensor and Instrument Co.,Ltd"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180071">
+    <div id="1180071" class="inset">
+        <a verel="=|bA=|HRt|Eua|wNz|ODA|TEx|I1L|4ND|LTE|WN0|9qZ|wcm|cy9|WNh|Vya|hbW|Zy1|2lu|Vuc|tc2|dGE|m9s|1pb|hLW|aWN|29u|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 16/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180071].subTitle}}</div>
+                        <p>{{projects[1180071].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180071')">
+                <a verel="=|bA=|HRt|Eua|wNz|ODA|TEx|I1L|4ND|LTE|WN0|9qZ|wcm|cy9|WNh|Vya|hbW|Zy1|2lu|Vuc|tc2|dGE|m9s|1pb|hLW|aWN|29u|Iva|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180071-21056859.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180071')">
+                <a href="https://trends.directindustry.fr/konica-minolta-sensing-americas/project-18425-1180071.html" ><span class="hidden">Webinar - Automatiser le tri des déchets textiles avec SpecimRETEX - Powered by Konica Minolta</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/konica-minolta-sensing-americas-18425.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L18425.gif" title="Konica Minolta Sensing Americas"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1177595">
+    <div id="1177595" class="inset">
+        <a verel="w=|0bW|Lmh|Tk1|c3N|xMT|OC0|Dgw|QtN|lY3|b2p|3By|tnL|vLW|LWN|WJo|1nb|yZC|bm9|XUt|ViY|lYm|cml|2V0|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 15/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1177595].subTitle}}</div>
+                        <p>{{projects[1177595].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1177595')">
+                <a verel="w=|0bW|Lmh|Tk1|c3N|xMT|OC0|Dgw|QtN|lY3|b2p|3By|tnL|vLW|LWN|WJo|1nb|yZC|bm9|XUt|ViY|lYm|cml|2V0|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/177595-20846154.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1177595')">
+                <a href="https://trends.directindustry.fr/getriebebau-nord-gmbh-co-kg/project-4808-1177595.html" ><span class="hidden">NORD ouvre une nouvelle boutique en ligne pour la République tchèque</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/getriebebau-nord-gmbh-co-kg-4808.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L4808.gif" title="Getriebebau NORD GmbH & Co. KG"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1177597">
+    <div id="1177597" class="inset">
+        <a verel="w=|0bW|Lmh|Tk3|c3N|xMT|OC0|Dgw|QtN|lY3|b2p|3By|tnL|vLW|LWN|WJo|1nb|yZC|bm9|XUt|ViY|lYm|cml|2V0|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 15/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1177597].subTitle}}</div>
+                        <p>{{projects[1177597].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1177597')">
+                <a verel="w=|0bW|Lmh|Tk3|c3N|xMT|OC0|Dgw|QtN|lY3|b2p|3By|tnL|vLW|LWN|WJo|1nb|yZC|bm9|XUt|ViY|lYm|cml|2V0|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/177597-20846184.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1177597')">
+                <a href="https://trends.directindustry.fr/getriebebau-nord-gmbh-co-kg/project-4808-1177597.html" ><span class="hidden">Entraînements résistants à la corrosion et hygiéniques de NORD au salon drinktec</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/getriebebau-nord-gmbh-co-kg-4808.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L4808.gif" title="Getriebebau NORD GmbH & Co. KG"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1177598">
+    <div id="1177598" class="inset">
+        <a verel="w=|0bW|Lmh|Tk4|c3N|xMT|OC0|Dgw|QtN|lY3|b2p|3By|tnL|vLW|LWN|WJo|1nb|yZC|bm9|XUt|ViY|lYm|cml|2V0|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 15/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1177598].subTitle}}</div>
+                        <p>{{projects[1177598].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1177598')">
+                <a verel="w=|0bW|Lmh|Tk4|c3N|xMT|OC0|Dgw|QtN|lY3|b2p|3By|tnL|vLW|LWN|WJo|1nb|yZC|bm9|XUt|ViY|lYm|cml|2V0|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/177598-20846202.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1177598')">
+                <a href="https://trends.directindustry.fr/getriebebau-nord-gmbh-co-kg/project-4808-1177598.html" ><span class="hidden">NORD ouvre une nouvelle boutique en ligne pour la Finlande</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/getriebebau-nord-gmbh-co-kg-4808.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L4808.gif" title="Getriebebau NORD GmbH & Co. KG"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div><div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" data-project-block="1180060">
+    <div id="1180060" class="inset">
+        <a verel="w=|0bW|Lmh|DYw|gwM|xMT|OC0|Dgw|QtN|lY3|b2p|3By|tnL|vLW|LWN|WJo|1nb|yZC|bm9|XUt|ViY|lYm|cml|2V0|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" class="inset-hover" ><div class="description">
+                <div class="description-content">
+                    <div class="publicationDate">
+                        Publié (e) le 15/01/2026</div>
+                    <div class="data-cloak">
+                        <div class="subtitle">{{projects[1180060].subTitle}}</div>
+                        <p>{{projects[1180060].description}}</p>
+                    </div>
+                </div>
+                <div class="description-footer inline-center">
+                    <span class="link"><i class="fa fa-plus-circle"></i>Plus d'informations</span>
+                </div>
+            </div>
+        </a><div class="inline-center ">
+            <div class="inset-img" on-click="openProjectDetail('1180060')">
+                <a verel="w=|0bW|Lmh|DYw|gwM|xMT|OC0|Dgw|QtN|lY3|b2p|3By|tnL|vLW|LWN|WJo|1nb|yZC|bm9|XUt|ViY|lYm|cml|2V0|IvZ|uZn|cnk|XN0|5kd|0aW|ZWN|Gly|MuZ|uZH|cmV|y90|M6L|0cH|aHR" ><img class="lazyLoaded"  src="https://img.directindustry.fr/media/ps/images/common/projects/blank-om.gif" data-src="https://img.directindustry.fr/images_di/projects/images-om/180060-21055980.jpg" />
+                </a></div>
+        </div>
+
+        <div class="row inset-caption">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                 on-click="openProjectDetail('1180060')">
+                <a href="https://trends.directindustry.fr/getriebebau-nord-gmbh-co-kg/project-4808-1180060.html" ><span class="hidden">Rencontre avec NORD à l'aéroport inter-européen</span>
+                        </a></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <a href="https://www.directindustry.fr/prod/getriebebau-nord-gmbh-co-kg-4808.html" ><img class="lazyLoaded logo right"  src="https://img.directindustry.fr/media/images/common/projects/blank-om.gif"
+                             data-src="https://img.directindustry.fr/images_di/logo-pp/L4808.gif" title="Getriebebau NORD GmbH & Co. KG"/>
+                    </a></div>
+            </div>
+
+    </div>
+</div></div>
+                    </div>
+
+                    <div class="pagination-wrapper"><span class="current">1</span><a href="https://trends.directindustry.fr/?pageNumber=2">2</a><a href="https://trends.directindustry.fr/?pageNumber=3">3</a><a href="https://trends.directindustry.fr/?pageNumber=4">4</a><a href="https://trends.directindustry.fr/?pageNumber=5">5</a><a href="https://trends.directindustry.fr/?pageNumber=6">6</a><a href="https://trends.directindustry.fr/?pageNumber=7">7</a><a href="https://trends.directindustry.fr/?pageNumber=8">8</a><a href="https://trends.directindustry.fr/?pageNumber=9">9</a><a href="https://trends.directindustry.fr/?pageNumber=10">10</a><a class="next" href="https://trends.directindustry.fr/?pageNumber=2"><span>&gt;</span>&nbsp;Suivante</a></div><div class="row project-map" id="project-container">
+
+                        <h2 class="main-title hidden">
+                                <span>Carte de localisation</span>
+                            </h2>
+                        <div id="project-map" data-map="{}"></div>
+
+
+                    </div>
+                    <div data-projectIds="[1180440,1180380,1180407,1180422,1180311,1180374,1180288,1180319,1180331,1180228,1180250,1179296,1180193,1180197,1180200,1180206,1180210,1180211,1180213,1179989,1180153,1180167,1180165,1179974,1180126,1180128,1180130,1180115,1180071,1177595,1177597,1177598,1180060]"></div>
+
+                </div>
+    </div>
+</div>
+<div id="project-data" class="hidden" data-list="{&quot;pageTypeId&quot;:211,&quot;elementList&quot;:[{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180440,&quot;companyId&quot;:17407,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180380,&quot;companyId&quot;:69800,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180407,&quot;companyId&quot;:4607532,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180416,&quot;companyId&quot;:157589,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180422,&quot;companyId&quot;:34515,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180402,&quot;companyId&quot;:7913,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180311,&quot;companyId&quot;:4607532,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180374,&quot;companyId&quot;:35784,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180288,&quot;companyId&quot;:5391,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180319,&quot;companyId&quot;:54752,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180331,&quot;companyId&quot;:28713,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180228,&quot;companyId&quot;:17836,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180250,&quot;companyId&quot;:161167,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1179296,&quot;companyId&quot;:4613096,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180193,&quot;companyId&quot;:114499,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180197,&quot;companyId&quot;:114499,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180200,&quot;companyId&quot;:114499,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180206,&quot;companyId&quot;:114499,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180185,&quot;companyId&quot;:34515,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180210,&quot;companyId&quot;:16223,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180211,&quot;companyId&quot;:16223,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180213,&quot;companyId&quot;:16223,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1179989,&quot;companyId&quot;:4613096,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180153,&quot;companyId&quot;:161167,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180167,&quot;companyId&quot;:5073,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180165,&quot;companyId&quot;:5073,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1179974,&quot;companyId&quot;:69800,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180126,&quot;companyId&quot;:13965,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180128,&quot;companyId&quot;:13965,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180130,&quot;companyId&quot;:1657,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180115,&quot;companyId&quot;:54752,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180071,&quot;companyId&quot;:18425,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1177595,&quot;companyId&quot;:4808,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1177597,&quot;companyId&quot;:4808,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1177598,&quot;companyId&quot;:4808,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0},{&quot;elementTypeId&quot;:9,&quot;elementId&quot;:1180060,&quot;companyId&quot;:4808,&quot;displayMode&quot;:&quot;thumbnail&quot;,&quot;placementId&quot;:0}]}" data-type="trends"></div></div>
+                <div class="footer-free-tax">
+    * Les prix s'entendent hors taxe, hors frais de livraison, hors droits de douane, et ne comprennent pas l'ensemble des coûts supplémentaires liés aux options d'installation ou de mise en service. Les prix sont donnés à titre indicatif et peuvent évoluer en fonction des pays, des cours des matières premières et des taux de change.</div>
+<div class="brand-footer">
+    <div id="brands-container" class="brands-container">
+        <div>
+                <script id="VeSliderComponent" type="text/ractive">
+                    <VeSliderComponent on-staticClick="clickCompany"
+                    veSliderOptions="{imagesLoaded: true, cellAlign: 'left', contain: true, freeScroll: true, wrapAround: false, pageDots: false, prevNextButtons: true, autoPlay: 2000}"
+                    class='brands'>
+                    </VeSliderComponent>
+                </script>
+            </div>
+        </div>
+    <div class="footer">
+        <div class="scrollTopContainer">
+            <a class="scrollTopLink">
+                <i class="scrollTopLinkIcon fa fa-arrow-up"></i>
+            </a>
+        </div>
+        <div class="footer-top inline-center">
+            <div class="footer-top-item">
+                <div class="visitors left float-non-media" id="footer-items-source">
+                    <a verel="Q==|JjZ|vdX|X3N|3Rv|93X|vaG|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="sourceLink normal-line-height" >TROUVEZ LE BON PRODUIT</a></div>
+                    <div class="visitors left float-non-media" id="footer-items-sell">
+                    <a verel="4=|pb2|cHR|3Jp|JzY|zdW|eS9|3Ry|R1c|pbm|Y3R|XJl|9ka|vbl|dF9|WJp|hoa|vZX|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="exhibitLink borderLeft" >Devenir exposant</a></div>
+                    <div class="visitors left float-non-media" id="footer-items-exhibit">
+                    <a verel="=|ZnI|2U9|VhZ|uZ3|bGF|y8/|Mvc|vcn|aXR|mlz|0vV|jb2|ZS5|2l0|kuc|ubX|cG8|WV4|FsL|0dW|aXJ|y92|M6L|0cH|aHR" class="exhibitLink borderLeft" >Centre d'aide</a></div>
+                </div>
+            <ul class="footer-top-item links inline-left">
+                <li>
+                    <a href="https://www.directindustry.fr/soc-A.html" >Liste des marques</a></li>
+                    <li>
+                    <a verel="=|cg=|z1m|FuZ|/bG|bWw|Gh0|Mue|zaX|aGV|W50|9ze|3cy|aWV|S92|ljZ|mZm|a29|mFj|8tY|zY2|YXR|3N0|9tL|uY2|cnk|XN0|5kd|0aW|ZWN|Gly|UuZ|1cm|ZWN|y9z|M6L|0cH|aHR" class="external" >Compte fabricant</a></li>
+
+                    <li>
+                    <a verel="A==|Vud|jb3|YWN|mUv|N1c|zZW|ZS9|GFj|lzc|vbX|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" >Compte acheteur</a></li>
+
+                    <li>
+                    <a verel="=|Lw=|2Zy|9tL|uY2|cG8|WV4|FsL|0dW|aXJ|y52|Vzc|pbm|dXN|y9i|M6L|0cH|aHR" class="external logo ve" >Nos services</a></li>
+
+                    <li>
+                    <a verel="A==|Rtb|uaH|YmU|3Jp|JzY|zdW|Zy9|Glu|Fpb|vbW|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" >Inscription newsletter</a></li>
+
+                    <li>
+                    <a verel="XVz|V0L|ib3|L2F|29t|8uY|4cG|LWV|WFs|J0d|2aX|dy5|3d3|ovL|0cD|aHR" class="external logo ve" >À propos de VirtualExpo Group</a></li>
+                </ul>
+                <div class="footer-top-item social" id="social-links"><div decorator="cloakRender"><div class="data-cloak">{{>socialLinksTemplate}}</div></div></div>
+        </div>
+        <div class="footer-bottom">
+            <div class="logo-group inline-center">
+                <a verel="=|Lw=|29t|8uY|4cG|LWV|WFs|J0d|2aX|dy5|3d3|ovL|0cD|aHR" class="external logo ve" ></a><a verel="==|yLw|L2Z|W5l|5sa|ub2|cG8|2V4|Vyb|uYW|d3c|y93|M6L|0cH|aHR" class="external logo ar" ></a><a verel="==|yLw|L2Z|W5l|5sa|ub2|cG8|WV4|dya|uYW|d3c|y93|M6L|0cH|aHR" class="external logo ag" ></a><a verel="w==|ZyL|vLm|eHB|Gll|Jja|uYX|d3c|y93|M6L|0cH|aHR" class="external logo ae" ></a><a verel="v|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="external logo di" ></a><a verel="nIv|8uZ|4cG|bGV|WNh|Vka|ubW|d3c|y93|M6L|0cH|aHR" class="external logo me" ></a><a verel="i8=|5mc|wby|ZXh|Glj|F1d|ubm|d3c|y93|M6L|0cH|aHR" class="external logo ne" ></a></div>
+            <div class="infos inline-center">&copy; 2026&nbsp;Tous droits réservés
+                - <a verel="==|tbA|aHR|XMu|Vyb|vdG|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" class="footerLinksTerms" >Mentions légales</a>
+                - <a verel="1s|odG|eS5|mFj|Jpd|vcH|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" data-pdf-url="/pdf/privacy/202307/PRIVACY_FR.pdf" class="footerLinksPrivacy js-pdf-direct-link" >Politique de confidentialité</a>
+                - <a verel="=|bWw|mh0|d1L|vY2|ZnI|nku|N0c|kdX|aW5|WN0|lyZ|uZG|d3c|y93|M6L|0cH|aHR" data-pdf-url="/pdf/cgu/202210/CGU_FR.pdf" class="footerLinksCGU js-pdf-direct-link" >Conditions générales d'utilisation</a>
+                - <a verel="ygp|hvd|uc2|ZXM|W5j|VyZ|lZm|cHJ|Wku|Rvb|EaW|dDp|mlw|Njc|2YX|amF" class="footerLinksConsent" >Gestion des cookies</a>
+
+                    -
+                <a verel="g==|5jb|vdi|Lmd|Wl0|5ta|hbi|ZWl|y9i|M6L|0cH|aHR" class="external" >&#37122;ICP&#22791;16017613&#21495;-2</a><span id="countries-list">
+                    -&nbsp;<div id="countrieslist" class="countries-list"><div decorator="cloakRender"><div class="data-cloak">{{>countriesTemplate}}</div></div></div>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="grabber" class="grabber collapsed">
+    <div id="grabberActions" class="grabberActions">
+        <div id="grabberCounter" class="grabberCounter" ></div>
+        <div id="grabberCompareBtn" class="grabberCompareBtn grabberBtn wp-link btn btn-mcl" data-link="https://www.directindustry.fr/compare.html">
+            <a>
+                Comparer</a>
+        </div>
+        <div id="grabberEmptyBtn" onclick="emptyGrabber(event)" class="grabberEmptyBtn grabberBtn wp-link btn">
+            Vider le comparateur</div>
+    </div>
+    <div id="grabberProductDetails" class="grabberProductDetails">
+        <div id="productDetailsWrapper" class="productDetailsWrapper">
+            <div id="grabberMoreProducts" class="grabberMoreProducts">Comparer jusqu'à 10 produits</div>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript'>
+    (function (w, d) {
+        var a = function () {
+            var a = d.createElement('script');
+            a.type = 'text/javascript';
+            a.async = 'async';
+            a.src = '//' + ((w.location.protocol === 'https:') ? 's3.amazonaws.com/cdx-radar/' :
+                    'radar.cedexis.com/') + '01-10977-radar10.min.js';
+            d.body.appendChild(a);
+        };
+        if (w.addEventListener) {
+            w.addEventListener('load', a, false);
+        } else if (w.attachEvent) {
+            w.attachEvent('onload', a);
+        }
+    }(window, document));
+
+    </script>
+</div>
+        </div>
+        <script type="text/javascript">var GlobalJsVar_dataStatsGlobal ='{"pageTypeId":211,"elementList":[]}';</script><div id="eventStatco" style="display: none;"></div>
+        <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c788fa21dd5c9b7',t:'MTc3MDAyMzQ4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
