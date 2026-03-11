@@ -6,7 +6,7 @@
 - `npm run build:static` : génère des pages statiques dans `static-pages/` + `pagelist.*`.
   - Option : `node scripts/build-static-pages.js --source-dir-2 /path/to/pages` pour ajouter un second répertoire source.
   - Option : `node scripts/build-static-pages.js --append-output` pour conserver `static-pages/` et fusionner la pagelist.
-- `npm run serve:static` : sert les pages statiques depuis `static-pages/`.
+- `npm run serve:static` : sert les pages statiques depuis `static-pages/` (MongoDB en runtime si `MONGO_URI` est défini).
 - `npm run replace:statics` : remplace les URLs `static.virtual-expo.com` dans `pages/`.
 - `npm run extract:page-zips` : extrait tous les ZIPs présents dans `pages/`.
 - `npm run cleanup:pages` : supprime tout dans `pages/` sauf `drive-download-*.zip`.
@@ -22,6 +22,17 @@
   - Exemple : `npm run process:pages:all -- --batch-size 10000 --source-dir /var/ve-botify`.
 - `npm run count:static-pages` : compte les pages générées par catégorie (ex: `www`) et par segment `www/*`.
 - `npm run deploy:scp` : déploie le projet via SSH (sans `node_modules`, `.git`, `static-pages`) vers `198.244.201.115` et `141.94.195.5`.
+
+## MongoDB (runtime)
+
+Le serveur peut servir les pages depuis MongoDB (fallback sur les fichiers HTML).
+
+Variables d'environnement :
+- `MONGO_URI` (ex: `mongodb://app_portal-seo:***@vext3nodblx01-1.virtual-expo.com:27017/portal-seo?authSource=portal-seo`)
+- `MONGO_DB` (défaut: `portal-seo`)
+- `MONGO_COLLECTION` (défaut: `page-cache`)
+
+Clé de recherche : `url` = `<host><pathname>` (ex: `pdf.directindustry-china.cn` ou `www.example.com/path`).
 
 ## Endpoints utiles
 
