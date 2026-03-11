@@ -17,7 +17,7 @@
     "process:pages:batch": "node scripts/process-pages-batch.js",
     "process:pages:all": "node scripts/process-pages-all.js",
     "count:static-pages": "node scripts/count-static-pages.js",
-    "deploy:scp": "tar --exclude=node_modules --exclude=ecosystem.config.js --exclude=.git  --exclude=static-pages --exclude=pages -czf - . | ssh djamel.samai@198.244.201.115 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\" && tar --exclude=node_modules --exclude=.git  --exclude=static-pages --exclude=pages -czf - . | ssh djamel.samai@141.94.195.5 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\"",
+    "deploy:scp": "tar --exclude=node_modules --exclude=.git  --exclude=static-pages --exclude=pages -czf - . | ssh djamel.samai@198.244.201.115 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\" && tar --exclude=node_modules --exclude=.git  --exclude=static-pages --exclude=pages -czf - . | ssh djamel.samai@141.94.195.5 \"mkdir -p /var/sites/portal-seo && tar -xzf - -C /var/sites/portal-seo\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
   "dependencies": {
     "adm-zip": "^0.5.12",
     "express": "^5.2.1",
-    "mongodb": "^6.5.0"
+    "mongodb": "^6.5.0",
+    "newrelic": "^13.15.0"
   }
 }

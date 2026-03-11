@@ -6,6 +6,9 @@ const app = express();
 const PORT = 3000;  // port HTTP de dev
 const DIRECTORY = './pages'; // dossier avec tous les fichiers HTML
 
+const MAINTENANCE_SCRIPT_TAG = '<script src="/statics/maintenance-banner.js"></script>';
+const NEW_RELIC_SCRIPT_TAG = '<script src="/statics/newrelic.js"></script>';
+
 function normalizePathname(pathname) {
     if (!pathname) return '/';
     if (pathname.length > 1 && pathname.endsWith('/')) return pathname.slice(0, -1);
@@ -87,15 +90,19 @@ app.get('/statics/maintenance-banner.js', (req, res) => {
 });
 
 function injectMaintenanceScript(html) {
-    const scriptTag = '<script src="/statics/maintenance-banner.js"></script>';
-    if (html.includes(scriptTag)) return html;
+    const scriptTags = [NEW_RELIC_SCRIPT_TAG, MAINTENANCE_SCRIPT_TAG];
+    const missingTags = scriptTags.filter(tag => !html.includes(tag));
+
+    if (missingTags.length === 0) return html;
 
     const headClose = /<\/head>/i;
+    const injection = `${missingTags.join('\n')}\n`;
+
     if (headClose.test(html)) {
-        return html.replace(headClose, `${scriptTag}\n</head>`);
+        return html.replace(headClose, `${injection}</head>`);
     }
 
-    return `${scriptTag}\n${html}`;
+    return `${injection}${html}`;
 }
 
 // Middleware pour servir les fichiers

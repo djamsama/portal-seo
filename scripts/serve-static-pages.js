@@ -10,6 +10,9 @@ const STATICS_DIR = path.resolve(__dirname, '..', 'statics');
 const INDEX_JSON_PATH = path.resolve(STATIC_PAGES_DIR, 'pagelist.json');
 const INDEX_HTML_PATH = path.resolve(STATIC_PAGES_DIR, 'pagelist.html');
 
+const MAINTENANCE_SCRIPT_TAG = '<script src="/statics/maintenance-banner.js"></script>';
+const NEW_RELIC_SCRIPT_TAG = '<script src="/statics/newrelic.js"></script>';
+
 const MONGO_URI = process.env.MONGO_URI || '';
 const MONGO_DB = process.env.MONGO_DB || 'portal-seo';
 const MONGO_COLLECTION = process.env.MONGO_COLLECTION || 'page-cache';
@@ -119,6 +122,23 @@ app.get('/pagelist', (req, res) => {
     res.type('html').send(indexHtml || '<p>Aucune page générée.</p>');
 });
 
+
+const SITEMAPS_DIR = path.resolve(__dirname, '..', 'sitemaps');
+
+const sitemapFiles = fs
+    .readdirSync(SITEMAPS_DIR)
+    .filter((fileName) => /^sitemaps_.+\.xml$/.test(fileName));
+
+sitemapFiles.forEach((fileName) => {
+    app.get(`/${fileName}`, (req, res) => {
+        res.type('application/xml');
+        res.sendFile(path.join(SITEMAPS_DIR, fileName));
+    });
+});
+
+app.use('/sitemaps-me', express.static(path.join(SITEMAPS_DIR, 'sitemaps-me')));
+app.use('/sitemaps-di', express.static(path.join(SITEMAPS_DIR, 'sitemaps-di')));
+
 app.use(async (req, res) => {
     const host = normalizeHost(req.headers.host?.split(':')[0]);
     const pathname = normalizePathname(req.path);
@@ -146,15 +166,19 @@ app.use(async (req, res) => {
     }
 
     function injectMaintenanceScript(html) {
-        const scriptTag = '<script src="/statics/maintenance-banner.js"></script>';
-        if (html.includes(scriptTag)) return html;
+        const scriptTags = [NEW_RELIC_SCRIPT_TAG, MAINTENANCE_SCRIPT_TAG];
+        const missingTags = scriptTags.filter(tag => !html.includes(tag));
+
+        if (missingTags.length === 0) return html;
 
         const headClose = /<\/head>/i;
+        const injection = `${missingTags.join('\n')}\n`;
+
         if (headClose.test(html)) {
-            return html.replace(headClose, `${scriptTag}\n</head>`);
+            return html.replace(headClose, `${injection}</head>`);
         }
 
-        return `${scriptTag}\n${html}`;
+        return `${injection}${html}`;
     }
 
     if (!candidatePath) {
