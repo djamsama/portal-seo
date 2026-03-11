@@ -4,6 +4,7 @@ const path = require('path');
 const SOURCE_DIR = path.resolve(__dirname, '..', 'pages');
 const OUTPUT_DIR = path.resolve(__dirname, '..', 'static-pages');
 const STATIC_DIR_NAME = 'statics';
+const APPEND_OUTPUT = process.argv.includes('--append-output');
 
 function getArgValue(flag) {
     const index = process.argv.indexOf(flag);
@@ -124,12 +125,42 @@ function buildIndexFiles(entries) {
     fs.writeFileSync(indexHtmlPath, html, 'utf8');
 }
 
+function loadExistingEntries() {
+    if (!APPEND_OUTPUT) return [];
+
+    const indexJsonPath = path.join(OUTPUT_DIR, 'pagelist.json');
+    if (!fs.existsSync(indexJsonPath)) return [];
+
+    try {
+        const raw = fs.readFileSync(indexJsonPath, 'utf8');
+        const data = JSON.parse(raw);
+        return Array.isArray(data) ? data : [];
+    } catch (error) {
+        console.warn(`Unable to read existing pagelist: ${indexJsonPath}`);
+        return [];
+    }
+}
+
+function mergeEntries(existingEntries, newEntries) {
+    const map = new Map();
+    existingEntries.forEach((entry) => {
+        map.set(`${entry.host}${entry.urlPath}`, entry);
+    });
+    newEntries.forEach((entry) => {
+        map.set(`${entry.host}${entry.urlPath}`, entry);
+    });
+    return Array.from(map.values());
+}
+
 function buildStaticPages() {
-    if (fs.existsSync(OUTPUT_DIR)) {
+    if (fs.existsSync(OUTPUT_DIR) && !APPEND_OUTPUT) {
         fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
     }
 
-    const entries = [];
+    ensureDir(OUTPUT_DIR);
+
+    const existingEntries = loadExistingEntries();
+    const newEntries = [];
     let written = 0;
 
     SOURCE_DIRS.forEach((sourceDir) => {
@@ -141,16 +172,20 @@ function buildStaticPages() {
         htmlFiles.forEach((filePath) => {
             const entry = writeStaticPage(filePath);
             if (entry) {
-                entries.push(entry);
+                newEntries.push(entry);
                 written += 1;
             }
         });
     });
 
-    buildIndexFiles(entries);
+    const mergedEntries = APPEND_OUTPUT ? mergeEntries(existingEntries, newEntries) : newEntries;
+    buildIndexFiles(mergedEntries);
 
     console.log(`Static pages generated: ${written}`);
     console.log(`Output directory: ${OUTPUT_DIR}`);
+    if (APPEND_OUTPUT) {
+        console.log(`Pagelist entries (total): ${mergedEntries.length}`);
+    }
 }
 
 buildStaticPages();
