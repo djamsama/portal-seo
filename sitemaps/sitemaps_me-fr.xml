@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- sitemaps fr cat -->
+<sitemap>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-cat-it/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps fr kwrefs -->
+<sitemap>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-kwref-it/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps fr produits -->
+<sitemap>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_0.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_1.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_2.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_3.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_4.xml</loc>
+</sitemap>
+
+</sitemapindex>

@@ -64,6 +64,23 @@ app.get('/robots.txt', (req, res) => {
     res.type('text/plain');
     res.sendFile(path.join(__dirname, 'robots.txt'));
 });
+
+
+const sitemapFiles = fs
+    .readdirSync(path.join(__dirname, 'sitemaps'))
+    .filter((fileName) => /^sitemaps_.+\.xml$/.test(fileName));
+
+sitemapFiles.forEach((fileName) => {
+    app.get(`/${fileName}`, (req, res) => {
+        res.type('application/xml');
+        res.sendFile(path.join(__dirname, 'sitemaps', fileName));
+    });
+});
+
+app.use('/sitemaps-me', express.static(path.join(__dirname, 'sitemaps', 'sitemaps-me')));
+app.use('/sitemaps-di', express.static(path.join(__dirname, 'sitemaps', 'sitemaps-di')));
+
+
 app.get('/statics/maintenance-banner.js', (req, res) => {
     res.type('application/javascript');
     res.sendFile(path.join(__dirname, '/statics/maintenance-banner.js'));

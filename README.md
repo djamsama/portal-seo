@@ -38,6 +38,9 @@ Clé de recherche : `url` = `<host><pathname>` (ex: `pdf.directindustry-china.cn
 
 - `http://<domaine>:3000/pagelist` : liste des pages (sans port dans les liens).
 - `http://<domaine>:3000/robots.txt`
+- `http://<domaine>:3000/sitemaps_me-*.xml` : sert automatiquement tous les fichiers `sitemaps_*.xml` présents dans `sitemaps/`.
+- `http://<domaine>:3000/sitemaps-di/<path>` : mappe vers `sitemaps/sitemaps-di/<path>`.
+- `http://<domaine>:3000/sitemaps-me/<path>` : mappe vers `sitemaps/sitemaps-me/<path>`.
 
 ## Workflow recommandé
 
@@ -64,6 +67,7 @@ Clé de recherche : `url` = `<host><pathname>` (ex: `pdf.directindustry-china.cn
 ## Structure des dossiers
 
 - `pages/` : pages HTML sources.
+- `sitemaps/` : sitemaps XML (fichiers racine `sitemaps_*.xml` + sous-dossiers `sitemaps-me/` et `sitemaps-di/`).
 - `statics/` : assets statiques (JS/CSS) servis via `/statics`.
 - `static-pages/` : sortie des pages statiques générées.
 - `scripts/` : scripts utilitaires.
