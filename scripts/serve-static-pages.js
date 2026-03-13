@@ -149,10 +149,10 @@ app.use(async (req, res) => {
     const hostAlternates = getHostAlternates(host);
     const clientIp = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket.remoteAddress || 'unknown';
 
-    const mongoUrlKey = pathname === '/' ? host : `${host}${pathname}`;
+    const mongoUrlKey = pathname === '/' ? host : `${host}_${pathname.replace(/^\//, '').replace(/\//g, '_')}`;
     const mongoContent = await fetchPageFromMongo(mongoUrlKey);
     if (mongoContent) {
-        res.setHeader('Cache-Control', 'public, max-age=300');
+
         res.type('html').send(injectMaintenanceScript(mongoContent));
         log(`Served from MongoDB: ${mongoUrlKey} (ip: ${clientIp})`);
         return;
