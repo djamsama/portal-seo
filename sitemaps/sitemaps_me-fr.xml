@@ -3,33 +3,33 @@
 
 <!-- sitemaps fr cat -->
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-me/map-cat-it/sitemap_0.xml</loc>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-cat-fr/sitemap_0.xml</loc>
 </sitemap>
 
 <!-- sitemaps fr kwrefs -->
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-me/map-kwref-it/sitemap_0.xml</loc>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-kwref-fr/sitemap_0.xml</loc>
 </sitemap>
 
 <!-- sitemaps fr produits -->
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_0.xml</loc>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-fr/sitemap_0.xml</loc>
 </sitemap>
 
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_1.xml</loc>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-fr/sitemap_1.xml</loc>
 </sitemap>
 
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_2.xml</loc>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-fr/sitemap_2.xml</loc>
 </sitemap>
 
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_3.xml</loc>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-fr/sitemap_3.xml</loc>
 </sitemap>
 
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-it/sitemap_4.xml</loc>
+<loc>https://www.medicalexpo.fr/sitemaps-me/map-prod-fr/sitemap_4.xml</loc>
 </sitemap>
 
 </sitemapindex>
