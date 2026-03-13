@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- sitemaps cn cat -->
+<sitemap>
+<loc>https://www.medicalexpo.com.cn/sitemaps-ne/map-cat-cn/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps cn kwrefs -->
+<sitemap>
+<loc>https://www.medicalexpo.com.cn/sitemaps-ne/map-kwref-cn/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps cn produits -->
+<sitemap>
+<loc>https://www.medicalexpo.com.cn/sitemaps-ne/map-prod-cn/sitemap_0.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.medicalexpo.com.cn/sitemaps-ne/map-prod-cn/sitemap_1.xml</loc>
+</sitemap>
+
+</sitemapindex>

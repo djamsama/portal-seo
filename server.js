@@ -80,9 +80,12 @@ sitemapFiles.forEach((fileName) => {
     });
 });
 
-app.use('/sitemaps-me', express.static(path.join(__dirname, 'sitemaps', 'sitemaps-me')));
-app.use('/sitemaps-di', express.static(path.join(__dirname, 'sitemaps', 'sitemaps-di')));
-
+app.use('/sitemaps-ae', express.static(path.join(SITEMAPS_DIR, 'sitemaps-ae')));
+app.use('/sitemaps-ag', express.static(path.join(SITEMAPS_DIR, 'sitemaps-ag')));
+app.use('/sitemaps-ar', express.static(path.join(SITEMAPS_DIR, 'sitemaps-ar')));
+app.use('/sitemaps-di', express.static(path.join(SITEMAPS_DIR, 'sitemaps-di')));
+app.use('/sitemaps-me', express.static(path.join(SITEMAPS_DIR, 'sitemaps-me')));
+app.use('/sitemaps-ne', express.static(path.join(SITEMAPS_DIR, 'sitemaps-ne')));
 
 app.get('/statics/maintenance-banner.js', (req, res) => {
     res.type('application/javascript');

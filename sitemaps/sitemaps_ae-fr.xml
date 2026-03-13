@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- sitemaps fr cat -->
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-cat-fr/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps fr kwrefs -->
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-kwref-fr/sitemap_0.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-kwref-fr/sitemap_1.xml</loc>
+</sitemap>
+
+<!-- sitemaps fr produits -->
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-prod-fr/sitemap_0.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-prod-fr/sitemap_1.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-prod-fr/sitemap_2.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-prod-fr/sitemap_3.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-prod-fr/sitemap_4.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-prod-fr/sitemap_5.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-prod-fr/sitemap_6.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.archiexpo.fr/sitemaps-ae/map-prod-fr/sitemap_7.xml</loc>
+</sitemap>
+
+</sitemapindex>

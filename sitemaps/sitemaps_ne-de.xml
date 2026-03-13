@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- sitemaps de cat -->
+<sitemap>
+<loc>https://www.medicalexpo.de/sitemaps-ne/map-cat-de/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps de kwrefs -->
+<sitemap>
+<loc>https://www.medicalexpo.de/sitemaps-ne/map-kwref-de/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps de produits -->
+<sitemap>
+<loc>https://www.medicalexpo.de/sitemaps-ne/map-prod-de/sitemap_0.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.medicalexpo.de/sitemaps-ne/map-prod-de/sitemap_1.xml</loc>
+</sitemap>
+
+</sitemapindex>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- sitemaps ru cat -->
+<sitemap>
+<loc>https://www.agriexpo.ru/sitemaps-ag/map-cat-ru/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps ru kwrefs -->
+<sitemap>
+<loc>https://www.agriexpo.ru/sitemaps-ag/map-kwref-ru/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps ru produits -->
+<sitemap>
+<loc>https://www.agriexpo.ru/sitemaps-ag/map-prod-ru/sitemap_0.xml</loc>
+</sitemap>
+
+<sitemap>
+<loc>https://www.agriexpo.ru/sitemaps-ag/map-prod-ru/sitemap_1.xml</loc>
+</sitemap>
+
+</sitemapindex>

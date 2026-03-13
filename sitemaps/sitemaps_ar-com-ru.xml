@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- sitemaps ru cat -->
+<sitemap>
+<loc>https://www.medicalexpo.ru/sitemaps-ar/map-cat-com-ru/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps ru kwrefs -->
+<sitemap>
+<loc>https://www.medicalexpo.ru/sitemaps-ar/map-kwref-com-ru/sitemap_0.xml</loc>
+</sitemap>
+
+<!-- sitemaps ru produits -->
+<sitemap>
+<loc>https://www.medicalexpo.ru/sitemaps-ar/map-prod-com-ru/sitemap_0.xml</loc>
+</sitemap>
+
+</sitemapindex>
