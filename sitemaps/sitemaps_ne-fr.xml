@@ -3,21 +3,21 @@
 
 <!-- sitemaps fr cat -->
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-ne/map-cat-it/sitemap_0.xml</loc>
+<loc>https://www.nauticexpo.fr/sitemaps-ne/map-cat-fr/sitemap_0.xml</loc>
 </sitemap>
 
 <!-- sitemaps fr kwrefs -->
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-ne/map-kwref-it/sitemap_0.xml</loc>
+<loc>https://www.nauticexpo.fr/sitemaps-ne/map-kwref-fr/sitemap_0.xml</loc>
 </sitemap>
 
 <!-- sitemaps fr produits -->
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-ne/map-prod-it/sitemap_0.xml</loc>
+<loc>https://www.nauticexpo.fr/sitemaps-ne/map-prod-fr/sitemap_0.xml</loc>
 </sitemap>
 
 <sitemap>
-<loc>https://www.medicalexpo.fr/sitemaps-ne/map-prod-it/sitemap_1.xml</loc>
+<loc>https://www.nauticexpo.fr/sitemaps-ne/map-prod-fr/sitemap_1.xml</loc>
 </sitemap>
 
 </sitemapindex>
